@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
-    <title>Gridea</title>
-    <updated>2020-04-30T03:56:33.554Z</updated>
+    <title>吃小熊的霸王龙</title>
+    <updated>2020-04-30T04:05:44.102Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
     <entry>
         <title type="html"><![CDATA[第一次记录博客]]></title>
         <id>https://qiyulong.top/post/di-yi-ci-ji-lu-bo-ke/</id>
