@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-04-30T04:53:46.026Z</updated>
+    <updated>2020-05-01T04:31:03.253Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[成瘾的家庭因素]]></title>
+        <id>https://qiyulong.top/post/cheng-yin-de-jia-ting-yin-su/</id>
+        <link href="https://qiyulong.top/post/cheng-yin-de-jia-ting-yin-su/">
+        </link>
+        <updated>2020-05-01T04:26:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>家庭中，如果老公的地位低下，常被老婆数落，那么孩子的成瘾程度会更高。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>家庭中，如果老公的地位低下，常被老婆数落，那么孩子的成瘾程度会更高。</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[齐彭]]></title>
         <id>https://qiyulong.top/post/qi-peng/</id>
