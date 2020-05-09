@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-01T04:34:29.542Z</updated>
+    <updated>2020-05-09T02:24:18.744Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,58 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[当前日期加一天和指定日期加一天]]></title>
+        <id>https://qiyulong.top/post/dang-qian-ri-qi-jia-yi-tian-he-zhi-ding-ri-qi-jia-yi-tian/</id>
+        <link href="https://qiyulong.top/post/dang-qian-ri-qi-jia-yi-tian-he-zhi-ding-ri-qi-jia-yi-tian/">
+        </link>
+        <updated>2020-05-09T02:21:13.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>1.给当前时间加一天？一小时？</strong></p>
+<?php
+echo "今天:",date('Y-m-d H:i:s'),"<br>";
+echo "明天:",date('Y-m-d H:i:s',strtotime('+1 day'));
+?>
+<p>上一行输出当前时间，下一行输出明天时间<br>
+同理加一年，一小时，一分钟 ，一月。。。</p>
+<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 day'));</p>
+<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 hour'));</p>
+<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 minute'));</p>
+<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 mouth'));</p>
+<p>这里+1 day可以修改参数1为任何想需要的数  day也可以改成year（年），month（月），hour（小时）minute（分），second（秒）如：<br>
+date('Y-m-d H:i:s',strtotime(&quot;+1 day +1 hour +1 minute&quot;);<br>
+可以随便自由组合，以达到任意输出时间的目的<br>
+注：该方法之针对1970年以后试用，也就是时间戳的适用范围。</p>
+<p><strong>2.给指定时间加一天？一小时？.。。。。。</strong></p>
+<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 month&quot;,strtotime(&quot;2012-02-04&quot;)));</p>
+<p>结果为：2011-03-04</p>
+<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 week&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
+<p>结果为：2011-02-11</p>
+<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 day&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
+<p>结果为：2011-02-05</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[layDate 日期与时间组件 ]]></title>
+        <id>https://qiyulong.top/post/laydate-ri-qi-yu-shi-jian-zu-jian/</id>
+        <link href="https://qiyulong.top/post/laydate-ri-qi-yu-shi-jian-zu-jian/">
+        </link>
+        <updated>2020-05-09T02:13:13.000Z</updated>
+        <content type="html"><![CDATA[<p>1.下载laydata：https://www.layui.com/laydate/<br>
+2.取laydata文件放在存放静态文件的地方<br>
+3.引用（看文档）</p>
+<body>
+	<input type="text" class="layui-input" name="" id="test5" placeholder="yyyy-MM-dd HH:mm:ss" lay-key="6">
+	<script src="{$Think.const.SUPER_PUBLIC_URL}/laydate/laydate.js"></script>
+	<script>
+	laydate.render({
+	    elem: '#test5',
+	    type: 'datetime'
+	});
+	</script>
+</body>
+<p>备注：出现多个日期时，引入一个laydata.js文件即可，id必须不同。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[成瘾的家庭因素]]></title>
         <id>https://qiyulong.top/post/cheng-yin-de-jia-ting-yin-su/</id>
