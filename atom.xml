@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-11T03:41:56.202Z</updated>
+    <updated>2020-05-11T08:38:30.236Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[第十八届山东省大学生软件设计大赛]]></title>
+        <id>https://qiyulong.top/post/di-shi-ba-jie-shan-dong-sheng-da-xue-sheng-ruan-jian-she-ji-da-sai/</id>
+        <link href="https://qiyulong.top/post/di-shi-ba-jie-shan-dong-sheng-da-xue-sheng-ruan-jian-she-ji-da-sai/">
+        </link>
+        <updated>2020-05-11T08:22:19.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>
+<p>第十八届山东省大学生软件设计大赛<br>
+（详见：http://sw.sdusc.cn/index/index/newdetail.html?id=36）<br>
+<img src="https://qiyulong.top/post-images/1589185510985.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>可参与命题<br>
+a.	HTML5创意应用<br>
+（详见：http://sw.sdusc.cn/index/topic/index.html）<br>
+<img src="https://qiyulong.top/post-images/1589185588779.png" alt="" loading="lazy"><br>
+原因：（详见：http://sw.sdusc.cn/index/topic/detail.html?id=3）<br>
+<img src="https://qiyulong.top/post-images/1589185599115.png" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>b.	基于智能移动端的只会校园应用系统<br>
+（详见：http://sw.sdusc.cn/index/topic/index.html）<br>
+<img src="https://qiyulong.top/post-images/1589185613802.png" alt="" loading="lazy"><br>
+原因：（详见：http://sw.sdusc.cn/index/topic/detail.html?id=1）<br>
+<img src="https://qiyulong.top/post-images/1589185623976.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[快速激活Navicat Premium 12]]></title>
         <id>https://qiyulong.top/post/kuai-su-ji-huo-navicat-premium-12/</id>
