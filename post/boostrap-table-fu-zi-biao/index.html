@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>boostrap-table父子表 | 吃小熊的霸王龙</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1589553254044">
+<link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="script type=&quot;text/javascrpt&quot;&gt;
+$(function () {
+//1.初始化Table
+var oTable = new TableInit();
+oTable.Init();
+   ..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://qiyulong.top">
+        <img src="https://qiyulong.top/images/avatar.png?v=1589553254044" class="site-logo">
+        <h1 class="site-title">吃小熊的霸王龙</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      学而不思则罔，思而不学则殆
+    </div>
+    <div class="site-footer">
+      友情链接：<a href="https://www.baidu.com">百度</a> | <a class="rss" href="https://qiyulong.top/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">boostrap-table父子表</h2>
+            <div class="post-date">2020-05-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/boostrap-table-fu-zi-biao.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>script type=&quot;text/javascrpt&quot;&gt;<br>
+$(function () {<br>
+//1.初始化Table<br>
+var oTable = new TableInit();<br>
+oTable.Init();</p>
+<pre><code>        //2.初始化Button的点击事件
+        var oButtonInit = new ButtonInit();
+        oButtonInit.Init();
+
+        //3.初始化select的change事件
+        $(&quot;#zl_export&quot;).change(function () {
+            $('#tb_departments').bootstrapTable('refreshOptions', {
+                exportDataType: $(this).val()
+            });
+        });
+		$(&quot;#term&quot;).change(function () {
+		    $('#tb_departments').bootstrapTable('refreshOptions', {
+		        exportDataType: $(this).val()
+		    });
+		});
+        $(&quot;#area_id&quot;).change(function () {
+            $('#tb_departments').bootstrapTable('refreshOptions', {
+                exportDataType: $(this).val()
+            });
+        });
+        $(&quot;#school_id&quot;).change(function () {
+            $('#tb_departments').bootstrapTable('refreshOptions', {
+                exportDataType: $(this).val()
+            });
+        });
+    });
+
+    var TableInit = function () {
+        var oTableInit = new Object();
+        //初始化Table
+        oTableInit.Init = function () {
+            $('#tb_departments').bootstrapTable({
+                url: '__CONTROLLER__/data',         //请求后台的URL（*）
+				method: 'get',                      //请求方式（*）
+                toolbar: '#toolbar',                //工具按钮用哪个容器
+                striped: true,                      //是否显示行间隔色
+                cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+                pagination: true,                   //是否显示分页（*）
+                sortable: true,                     //是否启用排序
+                sortOrder: &quot;asc&quot;,                   //排序方式
+                queryParams: oTableInit.queryParams,//传递参数（*）
+                sidePagination: &quot;client&quot;,           //分页方式：client客户端分页，Factory服务端分页（*）
+                pageNumber: 1,                       //初始化加载第一页，默认第一页
+                pageSize: 10,                       //每页的记录行数（*）
+                pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+                search: true,                       //是否显示表格搜索
+                // strictSearch: false, //是否启用全匹配搜索
+                showColumns: true,                  //是否显示所有的列
+                showRefresh: true,              //是否显示刷新按钮
+                // showPaginationSwitch: true,
+                minimumCountColumns: 2,             //最少允许的列数
+                // clickToSelect: true,                //是否启用点击选中行
+                // height: 500,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+                uniqueId: &quot;id&quot;,                     //每一行的唯一标识，一般为主键列
+                showToggle: true,                    //是否显示详细视图和列表视图的切换按钮
+                cardView: false,                    //是否显示详细视图
+                detailView: true,                   //是否显示父子表
+                showExport: true,
+                exportDataType: &quot;basic&quot;,
+                //注册加载子表的事件。注意下这里的三个参数！
+                onExpandRow: function (index, row, $detail) {
+                    oTableInit.Init2(index, row, $detail);
+                },
+                onDblClickCell: function (field, value, row, $element) {
+                    show(field, value, row, $element);
+                },
+                columns: [	
+					{
+						title: '序号',
+						formatter: function (value, row, index) {
+							return index + 1;
+						}
+					}, {
+						field: 'name',
+						title: '院部名称'
+					},
+                ]
+            });
+        };
+		oTableInit.Init2 = function (index, row, $detail) {
+		    var parentid = row.id;
+		    var cur_table2 = $detail.html('&lt;table class=&quot;tb_2&quot;&gt;&lt;/table&gt;').find('table');
+		    $(cur_table2).bootstrapTable({
+				url: &quot;__CONTROLLER__/data2/id/&quot; + parentid,        //请求后台的URL（*）
+		        // url: &quot;__CONTROLLER__/data&quot; + parentid,
+		        method: 'get',
+		        uniqueId: &quot;id&quot;,
+		        pageSize: 10,
+		        pageList: [10, 25],
+		        columns: [
+				[
+					{
+						&quot;title&quot;: &quot;管理员列表&quot;,
+						&quot;halign&quot;:&quot;center&quot;,
+						&quot;align&quot;:&quot;center&quot;,
+						&quot;colspan&quot;: 5
+					}
+				],
+				[
+		        {
+		            title: '序号',
+		            formatter: function (value, row, index) {
+		                return index + 1;
+		            }
+		        }, {
+		            field: 'name',
+		            title: '教师姓名'
+		        }, {
+		            field: 'start_at',
+		            title: '教师编号'
+		        }, {
+		            field: 'id',
+		            formatter: function (value, row, index) {
+		                var a = '&lt;a class=&quot;red&quot; href=&quot;__CONTROLLER__/del/id/' + value + '&quot;&gt;删除&lt;/a&gt;';
+		                return a;
+		            },
+		            title: '操作',
+		        },
+				],
+		        ],
+		        // 无线循环取子表，直到子表里面没有记录
+		        // onExpandRow: function (index, row, $Subdetail) {
+		        //     oTableInit.Init3(index, row, $Subdetail);
+		        // }
+		    });
+		};
+
+
+        //得到查询的参数
+        oTableInit.queryParams = function (params) {
+            var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+                // shop_id: $(&quot;#shop_id&quot;).val()
+                // limit: params.limit,   //页面大小
+                // offset: params.offset,  //页码
+                // departmentname: $(&quot;#txt_search_departmentname&quot;).val(),
+            };
+            return temp;
+        };
+        return oTableInit;
+    };
+
+    var ButtonInit = function () {
+        var oInit = new Object();
+        var postdata = {};
+        oInit.Init = function () {
+            //初始化页面上面的按钮事件
+
+        };
+
+        return oInit;
+    };
+&lt;/script&gt;</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qiyulong.top/post/er-wei-shu-zu-ji-duo-wei-shu-zu/">
+                  <h3 class="post-title">
+                    二维数组及多维数组
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
