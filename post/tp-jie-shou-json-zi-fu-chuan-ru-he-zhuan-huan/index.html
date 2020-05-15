@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>齐彭 | 吃小熊的霸王龙</title>
+<title>tp接收json字符串如何转换 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,9 @@
 
 
 
-    <meta name="description" content="大口啵唧💑
-" />
+    <meta name="description" content="==&lt;?php
+// JSON编码的字符串
+$json = '{&quot;a&quot;:7, &quot;b&quot;:5, &quot;c&quot;:5, &quot;d&quot;:11, &quot;f&quot;:19..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -85,23 +86,32 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">齐彭</h2>
-            <div class="post-date">2020-04-30</div>
+            <h2 class="post-title">tp接收json字符串如何转换</h2>
+            <div class="post-date">2020-05-15</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/qi-peng.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/tp-jie-shou-json-zi-fu-chuan-ru-he-zhuan-huan.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>大口啵唧💑<img src="https://qiyulong.top/post-images/1588222355580.jpg" alt="" loading="lazy"></p>
+              <p>==&lt;?php<br>
+// JSON编码的字符串<br>
+$json = '{&quot;a&quot;:7, &quot;b&quot;:5, &quot;c&quot;:5, &quot;d&quot;:11, &quot;f&quot;:19}';</p>
+<p>// 使用json_decode（）函数对JSON字符串进行解码<br>
+//转换成对象类型<br>
+var_dump(json_decode($json));</p>
+<p>//转换成数组类型<br>
+var_dump(json_decode($json, true));<br>
+?&gt;==</p>
+<p>tp3.2接收ajax发送的json数据时：￥data = I('post.');然后使用json_decode(￥json, true)进行格式转换。或ajax为POST请求，使用如下接收并转换：￥array = json_decode($_POST['array'], true);</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/di-yi-ci-ji-lu-bo-ke/">
+                <a href="https://qiyulong.top/post/bootstraptable/">
                   <h3 class="post-title">
-                    第一次记录博客
+                    BootstrapTable
                   </h3>
                 </a>
               </div>

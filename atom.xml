@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-13T08:26:07.420Z</updated>
+    <updated>2020-05-15T07:28:56.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[tp接收json字符串如何转换]]></title>
+        <id>https://qiyulong.top/post/tp-jie-shou-json-zi-fu-chuan-ru-he-zhuan-huan/</id>
+        <link href="https://qiyulong.top/post/tp-jie-shou-json-zi-fu-chuan-ru-he-zhuan-huan/">
+        </link>
+        <updated>2020-05-15T02:06:21.000Z</updated>
+        <content type="html"><![CDATA[<p>==&lt;?php<br>
+// JSON编码的字符串<br>
+$json = '{&quot;a&quot;:7, &quot;b&quot;:5, &quot;c&quot;:5, &quot;d&quot;:11, &quot;f&quot;:19}';</p>
+<p>// 使用json_decode（）函数对JSON字符串进行解码<br>
+//转换成对象类型<br>
+var_dump(json_decode($json));</p>
+<p>//转换成数组类型<br>
+var_dump(json_decode($json, true));<br>
+?&gt;==</p>
+<p>tp3.2接收ajax发送的json数据时：￥data = I('post.');然后使用json_decode(￥json, true)进行格式转换。或ajax为POST请求，使用如下接收并转换：￥array = json_decode($_POST['array'], true);</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[BootstrapTable]]></title>
         <id>https://qiyulong.top/post/bootstraptable/</id>
