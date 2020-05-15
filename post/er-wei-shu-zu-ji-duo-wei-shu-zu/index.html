@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>当前日期加一天和指定日期加一天 | 吃小熊的霸王龙</title>
+<title>二维数组及多维数组 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,13 +18,13 @@
 
 
 
-    <meta name="description" content="1.给当前时间加一天？一小时？
-";
-echo "明天:",date('Y-m-d H:i:s',strtotime('+1 day'));
-?>
-上一行输出当前时间，下一行输出明天时间
-同理加一年，一小时，一分钟 ，一月。。。
-echo ..." />
+    <meta name="description" content="无非就是循环，依次循环逐渐变为一维数组。
+举例：
+foreach (￥array as ￥k =&gt; ￥v) {
+￥data['teachers_id'] = ￥v['id'];
+}
+说明：
+￥k为一维数组键，￥v为一维数组的值（二维数..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -90,44 +90,29 @@ echo ..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">当前日期加一天和指定日期加一天</h2>
-            <div class="post-date">2020-05-09</div>
+            <h2 class="post-title">二维数组及多维数组</h2>
+            <div class="post-date">2020-05-15</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/dang-qian-ri-qi-jia-yi-tian-he-zhi-ding-ri-qi-jia-yi-tian.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/er-wei-shu-zu-ji-duo-wei-shu-zu.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <p><strong>1.给当前时间加一天？一小时？</strong></p>
-<?php
-echo "今天:",date('Y-m-d H:i:s'),"<br>";
-echo "明天:",date('Y-m-d H:i:s',strtotime('+1 day'));
-?>
-<p>上一行输出当前时间，下一行输出明天时间<br>
-同理加一年，一小时，一分钟 ，一月。。。</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 day'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 hour'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 minute'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 mouth'));</p>
-<p>这里+1 day可以修改参数1为任何想需要的数  day也可以改成year（年），month（月），hour（小时）minute（分），second（秒）如：<br>
-date('Y-m-d H:i:s',strtotime(&quot;+1 day +1 hour +1 minute&quot;);<br>
-可以随便自由组合，以达到任意输出时间的目的<br>
-注：该方法之针对1970年以后试用，也就是时间戳的适用范围。</p>
-<p><strong>2.给指定时间加一天？一小时？.。。。。。</strong></p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 month&quot;,strtotime(&quot;2012-02-04&quot;)));</p>
-<p>结果为：2011-03-04</p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 week&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
-<p>结果为：2011-02-11</p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 day&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
-<p>结果为：2011-02-05</p>
+              <p><strong>无非就是循环，依次循环逐渐变为一维数组。</strong><br>
+举例：<br>
+foreach (￥array as ￥k =&gt; ￥v) {<br>
+￥data['teachers_id'] = ￥v['id'];<br>
+}<br>
+说明：<br>
+￥k为一维数组键，￥v为一维数组的值（二维数组的键[形式为数组因为￥k对应多个￥v]），因此二维数组的值以￥v为数组，含有的字段为键并查询出对应值。</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/laydate-ri-qi-yu-shi-jian-zu-jian/">
+                <a href="https://qiyulong.top/post/tp-jie-shou-json-zi-fu-chuan-ru-he-zhuan-huan/">
                   <h3 class="post-title">
-                    layDate 日期与时间组件 
+                    tp接收json字符串如何转换
                   </h3>
                 </a>
               </div>
