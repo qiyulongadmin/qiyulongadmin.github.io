@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>第一次记录博客 | 吃小熊的霸王龙</title>
+<title>DNS服务器 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,9 @@
 
 
 
-    <meta name="description" content="我的博客生涯刚刚开始。
-" />
+    <meta name="description" content="什么是DNS服务器？作用？
+1.DNS（Domain Name Server，域名服务器）是进行域名(domain name)和与之相对应的IP地址 (IP address)转换的服务器。
+2.域名解析：将域名转换为ip并发送给指定服务器。..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -85,14 +86,35 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">第一次记录博客</h2>
-            <div class="post-date">2020-04-30</div>
+            <h2 class="post-title">DNS服务器</h2>
+            <div class="post-date">2020-05-16</div>
+            
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/dns-fu-wu-qi.png')">
+              </div>
             
             <div class="post-content" v-pre>
-              <p>我的博客生涯刚刚开始。</p>
+              <p>什么是DNS服务器？作用？<br>
+1.DNS（Domain Name Server，域名服务器）是进行域名(domain name)和与之相对应的IP地址 (IP address)转换的服务器。<br>
+2.域名解析：将域名转换为ip并发送给指定服务器。</p>
+<p>PC端访问一个网址的过程：<br>
+PC-&gt;DNS服务器（高速缓存访问记录，期限两天）-&gt;跟服务器（根据域【区-.com/.cn】返回对应的.com服务器IP地址）-&gt;DNS服务器（接收IP地址并访问）-&gt;.com/.cn服务器（查找访问的内容）-&gt;DNS服务器-&gt;PC端（呈现页面）<br>
+<img src="https://qiyulong.top/post-images/1589592291834.png" alt="" loading="lazy"><br>
+（8.8.8.8为谷歌架设的DNS服务器）</p>
+<p>备注：<br>
+高速缓存：期限两天，可手动删除。<br>
+跟服务器：全球150多台，中国三四台，用于查询域服务器（.com或.cn等）对应的IP地址。</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qiyulong.top/post/boostrap-table-fu-zi-biao/">
+                  <h3 class="post-title">
+                    boostrap-table父子表
+                  </h3>
+                </a>
+              </div>
             
 
             
