@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-19T03:49:33.841Z</updated>
+    <updated>2020-05-19T06:59:01.140Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[ThinkPHP 3.2.3 增加 VIEW目录 变量替换]]></title>
+        <id>https://qiyulong.top/post/thinkphp-323-zeng-jia-view-mu-lu-bian-liang-ti-huan/</id>
+        <link href="https://qiyulong.top/post/thinkphp-323-zeng-jia-view-mu-lu-bian-liang-ti-huan/">
+        </link>
+        <updated>2020-05-19T06:51:35.000Z</updated>
+        <content type="html"><![CDATA[<p>修改ThinkPHP\Library\Behavior目录下ContentReplaceBehavior.class.php</p>
+<p>// 系统默认的特殊变量替换<br>
+<img src="https://qiyulong.top/post-images/1589871482225.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[负载均衡]]></title>
         <id>https://qiyulong.top/post/fu-zai-jun-heng/</id>
@@ -349,36 +360,6 @@ a.	HTML5创意应用<br>
 9.激活成功<br>
 <img src="https://qiyulong.top/post-images/1589168247032.jpg" alt="" loading="lazy"><br>
 <img src="https://qiyulong.top/post-images/1589168254945.jpg" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[当前日期加一天和指定日期加一天]]></title>
-        <id>https://qiyulong.top/post/dang-qian-ri-qi-jia-yi-tian-he-zhi-ding-ri-qi-jia-yi-tian/</id>
-        <link href="https://qiyulong.top/post/dang-qian-ri-qi-jia-yi-tian-he-zhi-ding-ri-qi-jia-yi-tian/">
-        </link>
-        <updated>2020-05-09T02:21:13.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>1.给当前时间加一天？一小时？</strong></p>
-<?php
-echo "今天:",date('Y-m-d H:i:s'),"<br>";
-echo "明天:",date('Y-m-d H:i:s',strtotime('+1 day'));
-?>
-<p>上一行输出当前时间，下一行输出明天时间<br>
-同理加一年，一小时，一分钟 ，一月。。。</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 day'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 hour'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 minute'));</p>
-<p>echo &quot;明天:&quot;,date('Y-m-d H:i:s',strtotime('+1 mouth'));</p>
-<p>这里+1 day可以修改参数1为任何想需要的数  day也可以改成year（年），month（月），hour（小时）minute（分），second（秒）如：<br>
-date('Y-m-d H:i:s',strtotime(&quot;+1 day +1 hour +1 minute&quot;);<br>
-可以随便自由组合，以达到任意输出时间的目的<br>
-注：该方法之针对1970年以后试用，也就是时间戳的适用范围。</p>
-<p><strong>2.给指定时间加一天？一小时？.。。。。。</strong></p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 month&quot;,strtotime(&quot;2012-02-04&quot;)));</p>
-<p>结果为：2011-03-04</p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 week&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
-<p>结果为：2011-02-11</p>
-<p>echo   date(&quot;Y-m-d&quot;,strtotime(&quot;+1 day&quot;,strtotime(&quot;2011-02-04&quot;)));</p>
-<p>结果为：2011-02-05</p>
 ]]></content>
     </entry>
 </feed>
