@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-19T06:59:01.140Z</updated>
+    <updated>2020-05-19T07:35:06.377Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -48,7 +48,7 @@ PC-&gt;DNS服务器（高速缓存访问记录，期限两天）-&gt;跟服务�
 （8.8.8.8为谷歌架设的DNS服务器）</p>
 <p>备注：<br>
 高速缓存：期限两天，可手动删除。<br>
-跟服务器：全球150多台，中国三四台，用于查询域服务器（.com或.cn等）对应的IP地址。</p>
+跟服务器：全球分为13组共计150多台，中国三四台，用于查询域服务器（.com或.cn等）对应的IP地址。</p>
 ]]></content>
     </entry>
     <entry>
