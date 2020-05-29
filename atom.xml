@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-28T18:30:51.280Z</updated>
+    <updated>2020-05-29T06:25:56.476Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[tp3.2foreach循环的复选框提交数据]]></title>
+        <id>https://qiyulong.top/post/tp32foreach-xun-huan-de-fu-xuan-kuang-ti-jiao-shu-ju/</id>
+        <link href="https://qiyulong.top/post/tp32foreach-xun-huan-de-fu-xuan-kuang-ti-jiao-shu-ju/">
+        </link>
+        <updated>2020-05-29T06:21:32.000Z</updated>
+        <content type="html"><![CDATA[<p>name=&quot;id[{$info.id}]&quot;<br>
+此处的name中以数组形式传递，里面的键必须含有（只为id[]那不是数组）。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[js-访问页面变执行js函数]]></title>
         <id>https://qiyulong.top/post/js-fang-wen-ye-mian-bian-zhi-xing-js-han-shu/</id>
@@ -279,16 +289,6 @@ var_dump(json_decode($json));</p>
 var_dump(json_decode($json, true));<br>
 ?&gt;==</p>
 <p>tp3.2接收ajax发送的json数据时：￥data = I('post.');然后使用json_decode(￥json, true)进行格式转换。或ajax为POST请求，使用如下接收并转换：￥array = json_decode($_POST['array'], true);</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BootstrapTable]]></title>
-        <id>https://qiyulong.top/post/bootstraptable/</id>
-        <link href="https://qiyulong.top/post/bootstraptable/">
-        </link>
-        <updated>2020-05-13T08:24:30.000Z</updated>
-        <content type="html"><![CDATA[<p>中文文档：https://blog.csdn.net/havebeenstand/article/details/96439201<br>
-下载及演示案例：https://www.bootstrap-table.com.cn/examples/welcome/index/</p>
 ]]></content>
     </entry>
 </feed>
