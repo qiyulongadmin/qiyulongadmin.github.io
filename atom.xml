@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-30T05:32:39.393Z</updated>
+    <updated>2020-05-30T13:14:07.450Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[试题解析答案-问答库]]></title>
+        <id>https://qiyulong.top/post/shi-ti-jie-xi-da-an-wen-da-ku/</id>
+        <link href="https://qiyulong.top/post/shi-ti-jie-xi-da-an-wen-da-ku/">
+        </link>
+        <updated>2020-05-30T13:13:11.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.asklib.com/</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TP3.2上传图片]]></title>
         <id>https://qiyulong.top/post/tp32-shang-chuan-tu-pian/</id>
@@ -232,24 +241,6 @@ $Supervise = new \Model\SuperviseModel();</p>
 <img src="https://qiyulong.top/post-images/1589859843184.jpg" alt="" loading="lazy"></p>
 <p>虽然DNS解析得到了多个IP，但是大多数软件只会使用第一个IP地址，<br>
 原因：当我一个IP到DNS上面请求DNS域名解析的时候，DNS系统会根据你的IP地址所到达的域名对应的IP地址中路由跳数最小的那个IP地址作为访问的IP地址，具体你可以用LINUX的NSLOOKUP来查看域名所对应的IP地址，然后用PC的TRACERT的功能把所有DNS解析出来的IP地址进行跳数记录，然后在访问该域名，查看具体是哪个地址解析给你的PC。比如百度，你会发现他上面实际解析出来的不是IP地址，而是 http://www.a.shifen.com这个域名，这个域名往下面去才是IP地址，而我估计，这个域名应该是百度自建的一个域名系统，最重要的作用就是指定你的IP所访问百度这个网址会使用到哪个IP地址，而使用CNAME有个好处就是，我IP地址去做改动的时候不需要去DNS运营商上面做改动，只需要自己的服务器做改动就好，方便自己的域名与实际IP地址做对应。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DNS服务器]]></title>
-        <id>https://qiyulong.top/post/dns-fu-wu-qi/</id>
-        <link href="https://qiyulong.top/post/dns-fu-wu-qi/">
-        </link>
-        <updated>2020-05-16T01:14:05.000Z</updated>
-        <content type="html"><![CDATA[<p>什么是DNS服务器？作用？<br>
-1.DNS（Domain Name Server，域名服务器）是进行域名(domain name)和与之相对应的IP地址 (IP address)转换的服务器。<br>
-2.域名解析：将域名转换为ip并发送给指定服务器。</p>
-<p>PC端访问一个网址的过程：<br>
-PC-&gt;DNS服务器（高速缓存访问记录，期限两天）-&gt;跟服务器（根据域【区-.com/.cn】返回对应的.com服务器IP地址）-&gt;DNS服务器（接收IP地址并访问）-&gt;.com/.cn服务器（查找访问的内容）-&gt;DNS服务器-&gt;PC端（呈现页面）<br>
-<img src="https://qiyulong.top/post-images/1589592291834.png" alt="" loading="lazy"><br>
-（8.8.8.8为谷歌架设的DNS服务器）</p>
-<p>备注：<br>
-高速缓存：期限两天，可手动删除。<br>
-跟服务器：全球分为13组共计150多台，中国三四台，用于查询域服务器（.com或.cn等）对应的IP地址。</p>
 ]]></content>
     </entry>
 </feed>
