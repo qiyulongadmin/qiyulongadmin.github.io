@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>TP3.2上传图片 | 吃小熊的霸王龙</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1590816754071">
+<link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+方法一：（生成日期文件+原图+缩略图）
+1.在入口文件index.php配置路径：
+//定义文件上传相关目录常量
+define('RO..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://qiyulong.top">
+        <img src="https://qiyulong.top/images/avatar.png?v=1590816754071" class="site-logo">
+        <h1 class="site-title">吃小熊的霸王龙</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      学而不思则罔，思而不学则殆
+    </div>
+    <div class="site-footer">
+      友情链接：<a href="https://www.baidu.com">百度</a> | <a class="rss" href="https://qiyulong.top/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">TP3.2上传图片</h2>
+            <div class="post-date">2020-05-30</div>
+            
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/tp32-shang-chuan-tu-pian.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="方法一生成日期文件原图缩略图">=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+方法一：（生成日期文件+原图+缩略图）</h1>
+<p>1.在入口文件index.php配置路径：</p>
+<p>//定义文件上传相关目录常量<br>
+define('ROOT_PATH', <strong>DIR</strong>);<br>
+define('UPLOAD_PATH', '/Public/Super/imgs/');</p>
+<p>====================================================<br>
+2.在Model封装一个上传logo图片的方法：</p>
+<p>public function upload_logo(￥file, ￥data){<br>
+//在添加商品基本数据之前，先实现文件上传，得到图片地址信息<br>
+if(￥file &amp;&amp; ￥file['error'] == 0){<br>
+//实例化文件上传类<br>
+//自定义配置数据<br>
+￥config = array(<br>
+'maxSize'       =&gt;  5 * 1024 * 1024, //上传的文件大小限制 (0-不做限制) byte<br>
+'exts'          =&gt;  array('jpg', 'png', 'gif', 'jpeg'), //允许上传的文件后缀<br>
+'rootPath'      =&gt;  ROOT_PATH . UPLOAD_PATH, //保存根路径<br>
+);<br>
+￥upload = new \Think\Upload(￥config);<br>
+￥upload_res = ￥upload -&gt; uploadOne(￥file);<br>
+// dump(￥upload_res);die;<br>
+if(!￥upload_res){<br>
+//上传失败，获取错误信息<br>
+￥error = ￥upload -&gt; getError();<br>
+//将上传类的错误信息，记录到模型类上error属性上<br>
+￥this -&gt; error = ￥error;<br>
+return false;<br>
+}<br>
+//上传成功，需要拼接文件保存路径，用于添加到数据表<br>
+￥data['goods_big_img'] = UPLOAD_PATH . ￥upload_res['savepath'] . ￥upload_res['savename'];</p>
+<pre><code>     //商品logo图片上传成功，生成缩略图
+     // 实例化Image类
+     ￥image = new \Think\Image();
+     // 使用open方法打开原始图片（需要真实的文件路径）
+     ￥image -&gt; open( ROOT_PATH . ￥data['goods_big_img']);
+     // 使用thumb方法生成缩略图（需要传递最大宽度和最大高度限制）
+     ￥image -&gt; thumb(188, 188);
+     // 使用save方法保存缩略图图片（需要真实的文件路径）
+     ￥thumb_img = UPLOAD_PATH . ￥upload_res['savepath'] . 'thumb_' . ￥upload_res['savename'];
+     ￥image -&gt; save( ROOT_PATH . ￥thumb_img);
+     //将缩略图的路径保存到￥data中，最终保存到数据表
+     ￥data['goods_small_img'] = ￥thumb_img;
+     //数据处理成功，返回新的￥data
+     return ￥data;
+  }else{
+     return ￥data;
+  }
+</code></pre>
+<p>}</p>
+<p>====================================================<br>
+3.在controller里面调用：<br>
+public function add(){<br>
+//处理两个业务逻辑 一个是页面展示 另一个是表单提交<br>
+//根据请求方式判断<br>
+if(IS_POST){<br>
+//表单提交<br>
+￥data = I('post.');<br>
+//对富文本年编辑器字段，防范xss攻击<br>
+￥data['introduce'] = I('post.introduce', '', 'remove_xss');</p>
+<pre><code>  ￥model = D('Goods');
+  //调用模型中封装的upload_logo
+  //此处logo为input中name的值
+  ￥data = ￥model -&gt; upload_logo(￥_FILES['logo'], ￥data);
+  if(!￥data){
+     //上传过程中出错
+     ￥error = ￥model -&gt; getError();
+     ￥this -&gt; error(￥error);
+  }
+  if(!￥model -&gt; create(￥data)){
+     //create方法执行失败
+     //通过getError方法获取错误信息
+     ￥error = ￥model -&gt; getError();
+     //直接报错到页面
+     ￥this -&gt; error(￥error);
+  }
+  ￥res = ￥model -&gt; add();//使用create方法之后，这里不需要传递参数了
+  if(￥res){
+     //添加成功 跳转到列表页
+     // ￥this -&gt; redirect('Admin/Goods/index');//直接跳转，不显示提示信息
+     ￥this -&gt; success('添加成功', U('Admin/Goods/index'));
+  }else{
+     //添加失败 返回添加页面
+     ￥this -&gt; error('添加失败');
+  }
+</code></pre>
+<p>}else{<br>
+￥this -&gt; display();<br>
+}<br>
+}</p>
+<h1 id="本文借鉴httpsblogcsdnnetqq_39700569articledetails80359912方法二生成日期文件原图">本文借鉴：https://blog.csdn.net/qq_39700569/article/details/80359912<br>
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+方法二：（生成日期文件+原图）</h1>
+<h1 id="1前端input-typefile-namegpic">1.前端：<br>
+<input type="file" name="gpic" /></h1>
+<p>2.控制器：<br>
+function addlist(){ //收集数据 展示表单两个逻辑<br>
+// $Supervise = new \Model\SuperviseModel();<br>
+$Supervise = new \Model\SuperviseModel();</p>
+<pre><code>	        if(!empty($_POST)){
+	            //处理上传的图片附件
+	            //dump($_FILES);
+	            if($_FILES['gpic']['error']&lt;4){
+	                $cfg=array(
+	                    'rootPath'      =&gt;  './Public/Super/imgs/' //保存根路径
+	                );
+	                $arg=new \Think\Upload($cfg);
+	                $z=$arg-&gt;uploadOne($_FILES['gpic']);//执行成功后会把附件名字，路径等信息返回
+	                //dump($z);
+	                //dump($arg-&gt;getError());
+	                //数据库中存储路径名称
+	                $_POST['cont_pic']=$arg-&gt;rootPath.$z['savepath'].$z['savename'];
+	
+	            }
+	            $shuju=$Supervise-&gt;create();
+	            $z=$Supervise-&gt;add($shuju);
+	            if($z){
+	                $this-&gt;assign('message','图片添加成功!!!');
+	                $this-&gt;success('图片添加成功','',1);
+	            }else{
+	                $this-&gt;assign('error','图片添加失败');
+	            }
+	        }else{
+	            $this-&gt;display();
+	        }
+		}
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qiyulong.top/post/tp32-chang-shi/">
+                  <h3 class="post-title">
+                    TP3.2常识
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

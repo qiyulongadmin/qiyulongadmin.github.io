@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-29T10:10:04.300Z</updated>
+    <updated>2020-05-30T05:32:39.393Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,152 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[TP3.2上传图片]]></title>
+        <id>https://qiyulong.top/post/tp32-shang-chuan-tu-pian/</id>
+        <link href="https://qiyulong.top/post/tp32-shang-chuan-tu-pian/">
+        </link>
+        <updated>2020-05-30T04:18:13.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="方法一生成日期文件原图缩略图">=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+方法一：（生成日期文件+原图+缩略图）</h1>
+<p>1.在入口文件index.php配置路径：</p>
+<p>//定义文件上传相关目录常量<br>
+define('ROOT_PATH', <strong>DIR</strong>);<br>
+define('UPLOAD_PATH', '/Public/Super/imgs/');</p>
+<p>====================================================<br>
+2.在Model封装一个上传logo图片的方法：</p>
+<p>public function upload_logo(￥file, ￥data){<br>
+//在添加商品基本数据之前，先实现文件上传，得到图片地址信息<br>
+if(￥file &amp;&amp; ￥file['error'] == 0){<br>
+//实例化文件上传类<br>
+//自定义配置数据<br>
+￥config = array(<br>
+'maxSize'       =&gt;  5 * 1024 * 1024, //上传的文件大小限制 (0-不做限制) byte<br>
+'exts'          =&gt;  array('jpg', 'png', 'gif', 'jpeg'), //允许上传的文件后缀<br>
+'rootPath'      =&gt;  ROOT_PATH . UPLOAD_PATH, //保存根路径<br>
+);<br>
+￥upload = new \Think\Upload(￥config);<br>
+￥upload_res = ￥upload -&gt; uploadOne(￥file);<br>
+// dump(￥upload_res);die;<br>
+if(!￥upload_res){<br>
+//上传失败，获取错误信息<br>
+￥error = ￥upload -&gt; getError();<br>
+//将上传类的错误信息，记录到模型类上error属性上<br>
+￥this -&gt; error = ￥error;<br>
+return false;<br>
+}<br>
+//上传成功，需要拼接文件保存路径，用于添加到数据表<br>
+￥data['goods_big_img'] = UPLOAD_PATH . ￥upload_res['savepath'] . ￥upload_res['savename'];</p>
+<pre><code>     //商品logo图片上传成功，生成缩略图
+     // 实例化Image类
+     ￥image = new \Think\Image();
+     // 使用open方法打开原始图片（需要真实的文件路径）
+     ￥image -&gt; open( ROOT_PATH . ￥data['goods_big_img']);
+     // 使用thumb方法生成缩略图（需要传递最大宽度和最大高度限制）
+     ￥image -&gt; thumb(188, 188);
+     // 使用save方法保存缩略图图片（需要真实的文件路径）
+     ￥thumb_img = UPLOAD_PATH . ￥upload_res['savepath'] . 'thumb_' . ￥upload_res['savename'];
+     ￥image -&gt; save( ROOT_PATH . ￥thumb_img);
+     //将缩略图的路径保存到￥data中，最终保存到数据表
+     ￥data['goods_small_img'] = ￥thumb_img;
+     //数据处理成功，返回新的￥data
+     return ￥data;
+  }else{
+     return ￥data;
+  }
+</code></pre>
+<p>}</p>
+<p>====================================================<br>
+3.在controller里面调用：<br>
+public function add(){<br>
+//处理两个业务逻辑 一个是页面展示 另一个是表单提交<br>
+//根据请求方式判断<br>
+if(IS_POST){<br>
+//表单提交<br>
+￥data = I('post.');<br>
+//对富文本年编辑器字段，防范xss攻击<br>
+￥data['introduce'] = I('post.introduce', '', 'remove_xss');</p>
+<pre><code>  ￥model = D('Goods');
+  //调用模型中封装的upload_logo
+  //此处logo为input中name的值
+  ￥data = ￥model -&gt; upload_logo(￥_FILES['logo'], ￥data);
+  if(!￥data){
+     //上传过程中出错
+     ￥error = ￥model -&gt; getError();
+     ￥this -&gt; error(￥error);
+  }
+  if(!￥model -&gt; create(￥data)){
+     //create方法执行失败
+     //通过getError方法获取错误信息
+     ￥error = ￥model -&gt; getError();
+     //直接报错到页面
+     ￥this -&gt; error(￥error);
+  }
+  ￥res = ￥model -&gt; add();//使用create方法之后，这里不需要传递参数了
+  if(￥res){
+     //添加成功 跳转到列表页
+     // ￥this -&gt; redirect('Admin/Goods/index');//直接跳转，不显示提示信息
+     ￥this -&gt; success('添加成功', U('Admin/Goods/index'));
+  }else{
+     //添加失败 返回添加页面
+     ￥this -&gt; error('添加失败');
+  }
+</code></pre>
+<p>}else{<br>
+￥this -&gt; display();<br>
+}<br>
+}</p>
+<h1 id="本文借鉴httpsblogcsdnnetqq_39700569articledetails80359912方法二生成日期文件原图">本文借鉴：https://blog.csdn.net/qq_39700569/article/details/80359912<br>
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+<br>
+方法二：（生成日期文件+原图）</h1>
+<h1 id="1前端input-typefile-namegpic">1.前端：<br>
+<input type="file" name="gpic" /></h1>
+<p>2.控制器：<br>
+function addlist(){ //收集数据 展示表单两个逻辑<br>
+// $Supervise = new \Model\SuperviseModel();<br>
+$Supervise = new \Model\SuperviseModel();</p>
+<pre><code>	        if(!empty($_POST)){
+	            //处理上传的图片附件
+	            //dump($_FILES);
+	            if($_FILES['gpic']['error']&lt;4){
+	                $cfg=array(
+	                    'rootPath'      =&gt;  './Public/Super/imgs/' //保存根路径
+	                );
+	                $arg=new \Think\Upload($cfg);
+	                $z=$arg-&gt;uploadOne($_FILES['gpic']);//执行成功后会把附件名字，路径等信息返回
+	                //dump($z);
+	                //dump($arg-&gt;getError());
+	                //数据库中存储路径名称
+	                $_POST['cont_pic']=$arg-&gt;rootPath.$z['savepath'].$z['savename'];
+	
+	            }
+	            $shuju=$Supervise-&gt;create();
+	            $z=$Supervise-&gt;add($shuju);
+	            if($z){
+	                $this-&gt;assign('message','图片添加成功!!!');
+	                $this-&gt;success('图片添加成功','',1);
+	            }else{
+	                $this-&gt;assign('error','图片添加失败');
+	            }
+	        }else{
+	            $this-&gt;display();
+	        }
+		}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TP3.2常识]]></title>
+        <id>https://qiyulong.top/post/tp32-chang-shi/</id>
+        <link href="https://qiyulong.top/post/tp32-chang-shi/">
+        </link>
+        <updated>2020-05-30T03:59:03.000Z</updated>
+        <content type="html"><![CDATA[<p>1.入口文件<br>
+作用：配置路径，定义整站的信息。调试模式的控制。<br>
+位置：与public同级</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[字符串转数组，数组转字符串]]></title>
         <id>https://qiyulong.top/post/zi-fu-chuan-zhuan-shu-zu-shu-zu-zhuan-zi-fu-chuan/</id>
@@ -104,186 +250,6 @@ PC-&gt;DNS服务器（高速缓存访问记录，期限两天）-&gt;跟服务�
 <p>备注：<br>
 高速缓存：期限两天，可手动删除。<br>
 跟服务器：全球分为13组共计150多台，中国三四台，用于查询域服务器（.com或.cn等）对应的IP地址。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[boostrap-table父子表]]></title>
-        <id>https://qiyulong.top/post/boostrap-table-fu-zi-biao/</id>
-        <link href="https://qiyulong.top/post/boostrap-table-fu-zi-biao/">
-        </link>
-        <updated>2020-05-15T14:27:50.000Z</updated>
-        <content type="html"><![CDATA[<p>script type=&quot;text/javascrpt&quot;&gt;<br>
-$(function () {<br>
-//1.初始化Table<br>
-var oTable = new TableInit();<br>
-oTable.Init();</p>
-<pre><code>        //2.初始化Button的点击事件
-        var oButtonInit = new ButtonInit();
-        oButtonInit.Init();
-
-        //3.初始化select的change事件
-        $(&quot;#zl_export&quot;).change(function () {
-            $('#tb_departments').bootstrapTable('refreshOptions', {
-                exportDataType: $(this).val()
-            });
-        });
-		$(&quot;#term&quot;).change(function () {
-		    $('#tb_departments').bootstrapTable('refreshOptions', {
-		        exportDataType: $(this).val()
-		    });
-		});
-        $(&quot;#area_id&quot;).change(function () {
-            $('#tb_departments').bootstrapTable('refreshOptions', {
-                exportDataType: $(this).val()
-            });
-        });
-        $(&quot;#school_id&quot;).change(function () {
-            $('#tb_departments').bootstrapTable('refreshOptions', {
-                exportDataType: $(this).val()
-            });
-        });
-    });
-
-    var TableInit = function () {
-        var oTableInit = new Object();
-        //初始化Table
-        oTableInit.Init = function () {
-            $('#tb_departments').bootstrapTable({
-                url: '__CONTROLLER__/data',         //请求后台的URL（*）
-				method: 'get',                      //请求方式（*）
-                toolbar: '#toolbar',                //工具按钮用哪个容器
-                striped: true,                      //是否显示行间隔色
-                cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
-                pagination: true,                   //是否显示分页（*）
-                sortable: true,                     //是否启用排序
-                sortOrder: &quot;asc&quot;,                   //排序方式
-                queryParams: oTableInit.queryParams,//传递参数（*）
-                sidePagination: &quot;client&quot;,           //分页方式：client客户端分页，Factory服务端分页（*）
-                pageNumber: 1,                       //初始化加载第一页，默认第一页
-                pageSize: 10,                       //每页的记录行数（*）
-                pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
-                search: true,                       //是否显示表格搜索
-                // strictSearch: false, //是否启用全匹配搜索
-                showColumns: true,                  //是否显示所有的列
-                showRefresh: true,              //是否显示刷新按钮
-                // showPaginationSwitch: true,
-                minimumCountColumns: 2,             //最少允许的列数
-                // clickToSelect: true,                //是否启用点击选中行
-                // height: 500,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
-                uniqueId: &quot;id&quot;,                     //每一行的唯一标识，一般为主键列
-                showToggle: true,                    //是否显示详细视图和列表视图的切换按钮
-                cardView: false,                    //是否显示详细视图
-                detailView: true,                   //是否显示父子表
-                showExport: true,
-                exportDataType: &quot;basic&quot;,
-                //注册加载子表的事件。注意下这里的三个参数！
-                onExpandRow: function (index, row, $detail) {
-                    oTableInit.Init2(index, row, $detail);
-                },
-                onDblClickCell: function (field, value, row, $element) {
-                    show(field, value, row, $element);
-                },
-                columns: [	
-					{
-						title: '序号',
-						formatter: function (value, row, index) {
-							return index + 1;
-						}
-					}, {
-						field: 'name',
-						title: '院部名称'
-					},
-                ]
-            });
-        };
-		oTableInit.Init2 = function (index, row, $detail) {
-		    var parentid = row.id;
-		    var cur_table2 = $detail.html('&lt;table class=&quot;tb_2&quot;&gt;&lt;/table&gt;').find('table');
-		    $(cur_table2).bootstrapTable({
-				url: &quot;__CONTROLLER__/data2/id/&quot; + parentid,        //请求后台的URL（*）
-		        // url: &quot;__CONTROLLER__/data&quot; + parentid,
-		        method: 'get',
-		        uniqueId: &quot;id&quot;,
-		        pageSize: 10,
-		        pageList: [10, 25],
-		        columns: [
-				[
-					{
-						&quot;title&quot;: &quot;管理员列表&quot;,
-						&quot;halign&quot;:&quot;center&quot;,
-						&quot;align&quot;:&quot;center&quot;,
-						&quot;colspan&quot;: 5
-					}
-				],
-				[
-		        {
-		            title: '序号',
-		            formatter: function (value, row, index) {
-		                return index + 1;
-		            }
-		        }, {
-		            field: 'name',
-		            title: '教师姓名'
-		        }, {
-		            field: 'start_at',
-		            title: '教师编号'
-		        }, {
-		            field: 'id',
-		            formatter: function (value, row, index) {
-		                var a = '&lt;a class=&quot;red&quot; href=&quot;__CONTROLLER__/del/id/' + value + '&quot;&gt;删除&lt;/a&gt;';
-		                return a;
-		            },
-		            title: '操作',
-		        },
-				],
-		        ],
-		        // 无线循环取子表，直到子表里面没有记录
-		        // onExpandRow: function (index, row, $Subdetail) {
-		        //     oTableInit.Init3(index, row, $Subdetail);
-		        // }
-		    });
-		};
-
-
-        //得到查询的参数
-        oTableInit.queryParams = function (params) {
-            var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
-                // shop_id: $(&quot;#shop_id&quot;).val()
-                // limit: params.limit,   //页面大小
-                // offset: params.offset,  //页码
-                // departmentname: $(&quot;#txt_search_departmentname&quot;).val(),
-            };
-            return temp;
-        };
-        return oTableInit;
-    };
-
-    var ButtonInit = function () {
-        var oInit = new Object();
-        var postdata = {};
-        oInit.Init = function () {
-            //初始化页面上面的按钮事件
-
-        };
-
-        return oInit;
-    };
-&lt;/script&gt;</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二维数组及多维数组]]></title>
-        <id>https://qiyulong.top/post/er-wei-shu-zu-ji-duo-wei-shu-zu/</id>
-        <link href="https://qiyulong.top/post/er-wei-shu-zu-ji-duo-wei-shu-zu/">
-        </link>
-        <updated>2020-05-15T08:45:21.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>无非就是循环，依次循环逐渐变为一维数组。</strong><br>
-举例：<br>
-foreach (￥array as ￥k =&gt; ￥v) {<br>
-￥data['teachers_id'] = ￥v['id'];<br>
-}<br>
-说明：<br>
-￥k为一维数组键，￥v为一维数组的值（二维数组的键[形式为数组因为￥k对应多个￥v]），因此二维数组的值以￥v为数组，含有的字段为键并查询出对应值。</p>
 ]]></content>
     </entry>
 </feed>
