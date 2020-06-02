@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-05-30T17:04:59.025Z</updated>
+    <updated>2020-06-02T06:58:53.966Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,78 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[VM镜像官方下载地址]]></title>
+        <id>https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/</id>
+        <link href="https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/">
+        </link>
+        <updated>2020-06-02T02:14:02.000Z</updated>
+        <content type="html"><![CDATA[<p>http://msdn.itellyou.cn/<br>
+迅雷下载</p>
+<p>===================================================<br>
+win2003<br>
+cn_win_srv_2003_r2_enterprise_with_sp2_vl_cd1_X13-46432（版本：企业版）<br>
+秘钥：<br>
+MDGJK-PF6YQ-PD8DJ-RFQVM-7WKWG<br>
+QV9XT-CV22K-D8MGR-4MD86-8MYR6<br>
+VB96B-VFG8F-74XWJ-W67Q7-8X82B<br>
+M6F6D-VFQWH-CGWRB-RC7JR-VCV4W<br>
+C49DP-CPHCB-MDGP3-MG334-W2V4W<br>
+DR4B3-66VPQ-CK3VB-Y3BPY-2CJ2G<br>
+JYCJX-CHTJX-RGH97-86WM9-RB6B6<br>
+MVDYF-X7FBW-H29XT-TCKWW-RBYRT<br>
+BXJXT-9F88V-XXQWV-3MWMG-FYDJT<br>
+MHFT3-YGHV4-G86P4-KQXJ3-GYH4W<br>
+HXCRB-TQW9R-42JK8-TQ7X2-PJRDY</p>
+<p>安装后：在控制面板的添加删除Windows组件中关闭浏览器安全，避免每次访问都会提示安全问题。</p>
+<p>网络连接问题：(常用1.NAT及2.桥接)<br>
+1.使用VMnet8可以组建局域网使用(不可做服务器不可联网)，主机和虚拟机可以相互ping通（VMnet8的ipv4）。<br>
+2.直连物理网络有两种方式。<br>
+aaa:第一种方式是将虚拟机的网络设置为桥接Bridge。这种模式下，虚拟机就可以获取实体网络中路由器分配的独立IP地址，从而连入实体网络。这时，虚拟机和物理机通过同一根网线接入路由器设备，共享路由器的同一个端口。<br>
+在我们以前的端口偷窃（Port Stealing）文章中提到，同一个端口只会和同一个IP地址进行绑定。如果虚拟机不发包，而实体机发包，路由器默认该端口绑定的是实体机。这时，如果有其他设备访问虚拟机的IP，就会出现无法响应的情况。这也是使用桥接方式的虚拟机，经常无法被其他实体机发现的原因。<br>
+bbb:为了网络稳定，可以采用第二种方式。第二种方式就是使用USB接口的有线网卡。让虚拟机直接使用USB有线网卡，而该有线网卡使用独立一根网线连接路由设备。这样避免了端口抢夺问题。</p>
+<p>备注：<br>
+NAT方法：配置主机的VMint8-&gt;配置虚拟机的VMint8(ip网段与主机VMint8网段一致)-&gt;虚拟机服务器网络适配器选择NAT链接-&gt;进入虚拟机服务器配置ip（ip网段与主机VMint8网段一致）。</p>
+<p>桥接方法：1.虚拟机-&gt;编辑-&gt;虚拟网络编辑器-&gt;更改配置（右下角）-&gt;VMnet0修改桥接模式并桥接至与主机联网描述一致的选项（如下图）-&gt;确定。<br>
+<img src="https://qiyulong.top/post-images/1591080262276.png" alt="" loading="lazy"><br>
+<img src="https://qiyulong.top/post-images/1591081101453.png" alt="" loading="lazy"><br>
+2.选择一个虚拟机服务器（开启的）右键设置-&gt;网络适配器-&gt;勾选前四个（已连接、启动时链接、桥接模式、复制物理网络链接状态）<br>
+3.进入虚拟机服务器后右键网上邻居打开属性-&gt;右键本地连接属性-&gt;双击Internet 协议（TCP/IP）-&gt;IP地址与主机ipv4同一网段即可，默认网关192.168.1.1，DNS与主机一样（备用填8.8.8.8（谷歌DNS服务器））-&gt;确定-&gt;打开cmd-&gt;ping www.baidu.com返回4个数据丢失0即完成联网配置。</p>
+<p><strong>（详细步骤可参考（桥接）：https://blog.csdn.net/vicoqi/article/details/79951236）</strong></p>
+<p>===================================================</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[网络安全-web安全]]></title>
+        <id>https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/</id>
+        <link href="https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/">
+        </link>
+        <updated>2020-06-02T01:12:37.000Z</updated>
+        <content type="html"><![CDATA[<p>学习平台推荐：https://www.51cto.com/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[磁盘挂载]]></title>
+        <id>https://qiyulong.top/post/ci-pan-gua-zai/</id>
+        <link href="https://qiyulong.top/post/ci-pan-gua-zai/">
+        </link>
+        <updated>2020-06-01T09:13:55.000Z</updated>
+        <content type="html"><![CDATA[<p>===============================================================<br>
+A 理解：</p>
+<p>在windwos中分区是以C、D、E、F等盘符来体现。</p>
+<h1 id="而对linux来说磁盘设备也是一个文件而磁盘分区固然也是一个文件要将这个文件放置在哪个目录或者说哪个目录为分区的入口这个设置过程被称为挂载而该目录被称为挂载点">而对Linux来说磁盘设备也是一个文件，而磁盘分区固然也是一个文件，要将这个文件放置在哪个目录，或者说哪个目录为分区的入口，这个设置过程被称为挂载，而该目录被称为挂载点。</h1>
+<p>B 分区的意义、好处：</p>
+<p>1）数据的安全性</p>
+<pre><code>每个分区是独立且相互不影响的，对某个分区的数据进行格式化时不会影响其他分区，如我们重装系统时对C盘的数据进行格式化，并不会影响到其他盘。
+</code></pre>
+<p>2）提供系统的IO性能</p>
+<pre><code>将数据存入一个连续柱面的分区块或者从中读取，比起不分区从不连续的扇区写入和读取，IO性能更快。
+</code></pre>
+<h1 id="c-操作具体版本具体分析推荐wwwbaiducom">===============================================================<br>
+C 操作(具体版本具体分析)<br>
+推荐：www.baidu.com</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[find()与select()]]></title>
         <id>https://qiyulong.top/post/findyu-select/</id>
@@ -207,40 +279,6 @@ $Supervise = new \Model\SuperviseModel();</p>
         </link>
         <updated>2020-05-28T18:29:09.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://qiyulong.top/post-images/1590690595338.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[tp3.2出现报错-非法数据对象！]]></title>
-        <id>https://qiyulong.top/post/tp32-chu-xian-bao-cuo-fei-fa-shu-ju-dui-xiang/</id>
-        <link href="https://qiyulong.top/post/tp32-chu-xian-bao-cuo-fei-fa-shu-ju-dui-xiang/">
-        </link>
-        <updated>2020-05-28T18:25:28.000Z</updated>
-        <content type="html"><![CDATA[<p>原因：与create有关。</p>
-<p>解决：不要create+add，而用 data[]= '';+add<br>
-不要create+save，而用 data[]= '';+save</p>
-<p>举例：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><msup><mo>[</mo><mo mathvariant="normal">′</mo></msup><mi>a</mi><mi>c</mi><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><msub><mi>t</mi><mi>b</mi></msub><mi>a</mi><mi>n</mi><msup><mi>k</mi><mo mathvariant="normal">′</mo></msup><mo>]</mo><msup><mo>=</mo><mo mathvariant="normal">′</mo></msup><mi>T</mi><mi>h</mi><mi>i</mi><mi>n</mi><mi>k</mi><mi>P</mi><mi>H</mi><msup><mi>P</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">data[&#x27;account_bank&#x27;] = &#x27;ThinkPHP&#x27;;
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mopen"><span class="mopen">[</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">=</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">;</span></span></span></span>data['account'] = 'ThinkPHP@gmail.com';<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>s</mi><mi>t</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">rst =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>Teacher-&gt;data($data)-&gt;add();</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[表格里的复选框]]></title>
-        <id>https://qiyulong.top/post/biao-ge-li-de-fu-xuan-kuang/</id>
-        <link href="https://qiyulong.top/post/biao-ge-li-de-fu-xuan-kuang/">
-        </link>
-        <updated>2020-05-27T17:15:06.000Z</updated>
-        <content type="html"><![CDATA[<p>在每个表格隐藏一个input，之后便和普通的input一致。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ThinkPHP 3.2.3 增加 VIEW目录 变量替换]]></title>
-        <id>https://qiyulong.top/post/thinkphp-323-zeng-jia-view-mu-lu-bian-liang-ti-huan/</id>
-        <link href="https://qiyulong.top/post/thinkphp-323-zeng-jia-view-mu-lu-bian-liang-ti-huan/">
-        </link>
-        <updated>2020-05-19T06:51:35.000Z</updated>
-        <content type="html"><![CDATA[<p>修改ThinkPHP\Library\Behavior目录下ContentReplaceBehavior.class.php</p>
-<p>// 系统默认的特殊变量替换<br>
-<img src="https://qiyulong.top/post-images/1589871482225.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
