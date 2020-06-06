@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-02T06:58:53.966Z</updated>
+    <updated>2020-06-06T01:28:13.667Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,62 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[VM tools安装]]></title>
+        <id>https://qiyulong.top/post/vm-tools-an-zhuang/</id>
+        <link href="https://qiyulong.top/post/vm-tools-an-zhuang/">
+        </link>
+        <updated>2020-06-02T15:43:28.000Z</updated>
+        <content type="html"><![CDATA[<p>安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。<br>
+win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。</p>
+<p>kail有独特的方法：参考：https://jingyan.baidu.com/article/4b07be3c9de29248b380f3f9.html<br>
+将文件内的VMtools压缩包放在home文件内使用命令进行解压并配置：<br>
+1.解压命令： tar -zxvf 加压缩包名<br>
+2.进入指定文件夹：cd vmware-tools-distrib<br>
+3.查看当前目录：ls<br>
+4.执行某个文件(直接输入文件名即可)：./vmware-install.real.pl(备注：一直回车yes即可)<br>
+5.重启：reboot</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kail系统更新]]></title>
+        <id>https://qiyulong.top/post/kail-xi-tong-geng-xin/</id>
+        <link href="https://qiyulong.top/post/kail-xi-tong-geng-xin/">
+        </link>
+        <updated>2020-06-02T14:50:58.000Z</updated>
+        <content type="html"><![CDATA[<p>========================================================<br>
+添加kali更新源<br>
+<img src="https://qiyulong.top/post-images/1591110161156.png" alt="" loading="lazy"><br>
+1.更新软件源：</p>
+<p>root权限：<br>
+leafpad /etc/apt/sources.list<br>
+（在Linux系统中 vim上边的/etc/apt/sources.list文件，添加下面的代码保存即可）</p>
+<p>然后添加以下较快的源：</p>
+<p>deb http://http.kali.org/kali kali main non-free contrib<br>
+deb-src http://http.kali.org/kali kali main non-free contrib<br>
+deb http://security.kali.org/kali-security kali/updates main contrib non-free<br>
+deb http://ftp.sjtu.edu.cn/debian wheezy main non-free contrib<br>
+deb-src http://ftp.sjtu.edu.cn/debian wheezy main non-free contrib<br>
+deb http://ftp.sjtu.edu.cn/debian wheezy-proposed-updates main non-free contrib<br>
+deb-src http://ftp.sjtu.edu.cn/debian wheezy-proposed-updates main non-free contrib<br>
+deb http://ftp.sjtu.edu.cn/debian-security wheezy/updates main non-free contrib<br>
+deb-src http://ftp.sjtu.edu.cn/debian-security wheezy/updates main non-free contrib<br>
+deb http://mirrors.163.com/debian wheezy main non-free contrib<br>
+deb-src http://mirrors.163.com/debian wheezy main non-free contrib<br>
+deb http://mirrors.163.com/debian wheezy-proposed-updates main non-free contrib<br>
+deb-src http://mirrors.163.com/debian wheezy-proposed-updates main non-free contrib<br>
+deb-src http://mirrors.163.com/debian-security wheezy/updates main non-free contrib<br>
+deb http://mirrors.163.com/debian-security wheezy/updates main non-free contrib<br>
+保存之后运行：apt-get update</p>
+<p>2.kali-linux安装中文输入法（以下任意选择一种安装）：<br>
+apt-get install fcitx-table-wbpy ttf-wqy-microhei ttf-wqy-zenhei                        #拼音五笔<br>
+apt-get install ibus ibus-pinyin              #经典的ibus<br>
+apt-get install fcitx fcitx-pinyin fcitx-module-cloudpinyin fcitx-googlepinyin                #fcitx拼音</p>
+<p>注销，重新登录之后才可以使用。</p>
+<p>========================================================<br>
+镜像下载：https://pan.baidu.com/s/190nw5pt7uedyHOrH5tTAWQ 提取码：yyln</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VM镜像官方下载地址]]></title>
         <id>https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/</id>
@@ -260,25 +316,6 @@ $Supervise = new \Model\SuperviseModel();</p>
 去除最后一个逗号：￥pizzas = rtrim(￥pizza,',');<br>
 字符串转数组：￥array = explode(',',￥pizzas);</p>
 <p>数组转字符串：￥pizzas = implode(',',￥array);</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[tp3.2foreach循环的复选框提交数据]]></title>
-        <id>https://qiyulong.top/post/tp32foreach-xun-huan-de-fu-xuan-kuang-ti-jiao-shu-ju/</id>
-        <link href="https://qiyulong.top/post/tp32foreach-xun-huan-de-fu-xuan-kuang-ti-jiao-shu-ju/">
-        </link>
-        <updated>2020-05-29T06:21:32.000Z</updated>
-        <content type="html"><![CDATA[<p>name=&quot;id[{$info.id}]&quot;<br>
-此处的name中以数组形式传递，里面的键必须含有（只为id[]那不是数组）。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[js-访问页面变执行js函数]]></title>
-        <id>https://qiyulong.top/post/js-fang-wen-ye-mian-bian-zhi-xing-js-han-shu/</id>
-        <link href="https://qiyulong.top/post/js-fang-wen-ye-mian-bian-zhi-xing-js-han-shu/">
-        </link>
-        <updated>2020-05-28T18:29:09.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://qiyulong.top/post-images/1590690595338.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
