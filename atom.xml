@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-06T01:28:13.667Z</updated>
+    <updated>2020-06-07T07:54:59.671Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[win10台式机声音设置]]></title>
+        <id>https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/</id>
+        <link href="https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/">
+        </link>
+        <updated>2020-06-07T07:48:27.000Z</updated>
+        <content type="html"><![CDATA[<p>问题：要启动GUI。<br>
+控制面板-&gt;硬件和声音-&gt;Realtek高清晰音频管理器-&gt;插孔设置-&gt;勾选禁用前面板插孔检测-&gt;进行设置。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VM tools安装]]></title>
         <id>https://qiyulong.top/post/vm-tools-an-zhuang/</id>
@@ -303,19 +313,6 @@ $Supervise = new \Model\SuperviseModel();</p>
         <content type="html"><![CDATA[<p>1.入口文件<br>
 作用：配置路径，定义整站的信息。调试模式的控制。<br>
 位置：与public同级</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[字符串转数组，数组转字符串]]></title>
-        <id>https://qiyulong.top/post/zi-fu-chuan-zhuan-shu-zu-shu-zu-zhuan-zi-fu-chuan/</id>
-        <link href="https://qiyulong.top/post/zi-fu-chuan-zhuan-shu-zu-shu-zu-zhuan-zi-fu-chuan/">
-        </link>
-        <updated>2020-05-29T10:00:57.000Z</updated>
-        <content type="html"><![CDATA[<p>句号（任何符号）相隔字符串转数组：<br>
-￥pizza = &quot;1,2,3,4,&quot;;<br>
-去除最后一个逗号：￥pizzas = rtrim(￥pizza,',');<br>
-字符串转数组：￥array = explode(',',￥pizzas);</p>
-<p>数组转字符串：￥pizzas = implode(',',￥array);</p>
 ]]></content>
     </entry>
 </feed>
