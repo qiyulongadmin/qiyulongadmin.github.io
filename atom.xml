@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-07T08:10:07.838Z</updated>
+    <updated>2020-06-09T03:26:57.533Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[ajax-tp3.2]]></title>
+        <id>https://qiyulong.top/post/ajax-tp32/</id>
+        <link href="https://qiyulong.top/post/ajax-tp32/">
+        </link>
+        <updated>2020-06-09T03:21:39.000Z</updated>
+        <content type="html"><![CDATA[<p>前端：（selectVal为js变量，arrayss为控制器传回的值-变量随便定义）<br>
+$.ajax({<br>
+url: &quot;<strong>CONTROLLER</strong>/ajax&quot;,<br>
+type: &quot;POST&quot;,<br>
+data: {<br>
+teachers_id:selectVal,<br>
+},<br>
+dataType:&quot;json&quot;,<br>
+success: function(arrayss) {<br>
+alert(arrayss.password);<br>
+}<br>
+});</p>
+<p>控制器：<br>
+//接收值<br>
+￥teachers_id=￥_POST['teachers_id'];<br>
+//传值回ajax<br>
+$this-&gt;ajaxReturn(array('password'=&gt;0,'data'=&gt;1));</p>
+<p>效果为弹出提示框：0</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[win10台式机声音设置]]></title>
         <id>https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/</id>
@@ -302,17 +328,6 @@ $Supervise = new \Model\SuperviseModel();</p>
 	        }
 		}
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TP3.2常识]]></title>
-        <id>https://qiyulong.top/post/tp32-chang-shi/</id>
-        <link href="https://qiyulong.top/post/tp32-chang-shi/">
-        </link>
-        <updated>2020-05-30T03:59:03.000Z</updated>
-        <content type="html"><![CDATA[<p>1.入口文件<br>
-作用：配置路径，定义整站的信息。调试模式的控制。<br>
-位置：与public同级</p>
 ]]></content>
     </entry>
 </feed>

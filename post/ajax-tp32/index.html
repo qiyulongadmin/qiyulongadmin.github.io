@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>成瘾的家庭因素 | 吃小熊的霸王龙</title>
+<title>ajax-tp3.2 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,9 +18,12 @@
 
 
 
-    <meta name="description" content="家庭中，如果老公的地位低下，常被老婆数落，那么孩子的成瘾程度会更高。
-
-" />
+    <meta name="description" content="前端：（selectVal为js变量，arrayss为控制器传回的值-变量随便定义）
+$.ajax({
+url: &quot;CONTROLLER/ajax&quot;,
+type: &quot;POST&quot;,
+data: {
+te..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -86,24 +89,40 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">成瘾的家庭因素</h2>
-            <div class="post-date">2020-05-01</div>
+            <h2 class="post-title">ajax-tp3.2</h2>
+            <div class="post-date">2020-06-09</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/cheng-yin-de-jia-ting-yin-su.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/ajax-tp32.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>家庭中，如果老公的地位低下，常被老婆数落，那么孩子的成瘾程度会更高。</p>
-<!-- more -->
+              <p>前端：（selectVal为js变量，arrayss为控制器传回的值-变量随便定义）<br>
+$.ajax({<br>
+url: &quot;<strong>CONTROLLER</strong>/ajax&quot;,<br>
+type: &quot;POST&quot;,<br>
+data: {<br>
+teachers_id:selectVal,<br>
+},<br>
+dataType:&quot;json&quot;,<br>
+success: function(arrayss) {<br>
+alert(arrayss.password);<br>
+}<br>
+});</p>
+<p>控制器：<br>
+//接收值<br>
+￥teachers_id=￥_POST['teachers_id'];<br>
+//传值回ajax<br>
+$this-&gt;ajaxReturn(array('password'=&gt;0,'data'=&gt;1));</p>
+<p>效果为弹出提示框：0</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/qi-peng/">
+                <a href="https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/">
                   <h3 class="post-title">
-                    齐彭
+                    win10台式机声音设置
                   </h3>
                 </a>
               </div>
