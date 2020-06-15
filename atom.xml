@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-12T01:17:25.599Z</updated>
+    <updated>2020-06-15T02:26:08.552Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -162,7 +162,30 @@ NAT方法：配置主机的VMint8-&gt;配置虚拟机的VMint8(ip网段与主机
 2.选择一个虚拟机服务器（开启的）右键设置-&gt;网络适配器-&gt;勾选前四个（已连接、启动时链接、桥接模式、复制物理网络链接状态）<br>
 3.进入虚拟机服务器后右键网上邻居打开属性-&gt;右键本地连接属性-&gt;双击Internet 协议（TCP/IP）-&gt;IP地址与主机ipv4同一网段即可，默认网关192.168.1.1，DNS与主机一样（备用填8.8.8.8（谷歌DNS服务器））-&gt;确定-&gt;打开cmd-&gt;ping www.baidu.com返回4个数据丢失0即完成联网配置。</p>
 <p><strong>（详细步骤可参考（桥接）：https://blog.csdn.net/vicoqi/article/details/79951236）</strong></p>
-<p>===================================================</p>
+<p>===================================================<br>
+kail桥接联接wife使用命令配置kail的ipv4:<br>
+1.配置ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
+<img src="https://qiyulong.top/post-images/1592187684298.png" alt="" loading="lazy"><br>
+代码：<br>
+auto eth0<br>
+iface eth0 inet static<br>
+address 192.168.x.x<br>
+gateway 192.168.x.x<br>
+netmask 255.255.255.0</p>
+<p>2.配置DNS：gedit /etc/resolv.conf<br>
+<img src="https://qiyulong.top/post-images/1592187720787.png" alt="" loading="lazy"><br>
+代码：<br>
+nameserver 8.8.8.8<br>
+nameserver 223.5.5.5<br>
+nameserver 180.76.76.76<br>
+备注：<br>
+8.8.8.8是谷歌的IP地址<br>
+223.5.5.5是阿里云的IP地址<br>
+180.76.76.87是百度的IP地址</p>
+<p>3.启动eth0：ifconfig eth0 up</p>
+<p>4.重启网络：service networking restart</p>
+<p>5.检验成果：ifconfig 发现eth0的IP地址出现了。ping www.baidu.com ,成功返回。打开KALI浏览器，访问成功。<br>
+<img src="https://qiyulong.top/post-images/1592187962539.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>

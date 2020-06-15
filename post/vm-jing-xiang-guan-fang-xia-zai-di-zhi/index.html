@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1591924640853">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1592187964955">
 <link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
 
 
@@ -32,7 +32,7 @@ cn_win_srv_2003_r2_enterprise_..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://qiyulong.top">
-        <img src="https://qiyulong.top/images/avatar.png?v=1591924640853" class="site-logo">
+        <img src="https://qiyulong.top/images/avatar.png?v=1592187964955" class="site-logo">
         <h1 class="site-title">吃小熊的霸王龙</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -127,7 +127,30 @@ NAT方法：配置主机的VMint8-&gt;配置虚拟机的VMint8(ip网段与主机
 2.选择一个虚拟机服务器（开启的）右键设置-&gt;网络适配器-&gt;勾选前四个（已连接、启动时链接、桥接模式、复制物理网络链接状态）<br>
 3.进入虚拟机服务器后右键网上邻居打开属性-&gt;右键本地连接属性-&gt;双击Internet 协议（TCP/IP）-&gt;IP地址与主机ipv4同一网段即可，默认网关192.168.1.1，DNS与主机一样（备用填8.8.8.8（谷歌DNS服务器））-&gt;确定-&gt;打开cmd-&gt;ping www.baidu.com返回4个数据丢失0即完成联网配置。</p>
 <p><strong>（详细步骤可参考（桥接）：https://blog.csdn.net/vicoqi/article/details/79951236）</strong></p>
-<p>===================================================</p>
+<p>===================================================<br>
+kail桥接联接wife使用命令配置kail的ipv4:<br>
+1.配置ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
+<img src="https://qiyulong.top/post-images/1592187684298.png" alt="" loading="lazy"><br>
+代码：<br>
+auto eth0<br>
+iface eth0 inet static<br>
+address 192.168.x.x<br>
+gateway 192.168.x.x<br>
+netmask 255.255.255.0</p>
+<p>2.配置DNS：gedit /etc/resolv.conf<br>
+<img src="https://qiyulong.top/post-images/1592187720787.png" alt="" loading="lazy"><br>
+代码：<br>
+nameserver 8.8.8.8<br>
+nameserver 223.5.5.5<br>
+nameserver 180.76.76.76<br>
+备注：<br>
+8.8.8.8是谷歌的IP地址<br>
+223.5.5.5是阿里云的IP地址<br>
+180.76.76.87是百度的IP地址</p>
+<p>3.启动eth0：ifconfig eth0 up</p>
+<p>4.重启网络：service networking restart</p>
+<p>5.检验成果：ifconfig 发现eth0的IP地址出现了。ping www.baidu.com ,成功返回。打开KALI浏览器，访问成功。<br>
+<img src="https://qiyulong.top/post-images/1592187962539.png" alt="" loading="lazy"></p>
 
             </div>
             
