@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-15T02:26:08.552Z</updated>
+    <updated>2020-06-18T01:32:30.619Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[win2003渗透环境]]></title>
+        <id>https://qiyulong.top/post/win2003-shen-tou-huan-jing/</id>
+        <link href="https://qiyulong.top/post/win2003-shen-tou-huan-jing/">
+        </link>
+        <updated>2020-06-18T01:28:07.000Z</updated>
+        <content type="html"><![CDATA[<p>1.安装PHPstudent。<br>
+2.安装webug靶场。下载后打开Windows Server 2003 Standard Edition.vmx（打开方式：VMware）。<br>
+3.下载pikachu。将文件放在www目录下，打开后查看，然后打开install.php文件即可安装。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[重装系统win7]]></title>
         <id>https://qiyulong.top/post/chong-zhuang-xi-tong-win7/</id>
@@ -229,15 +240,6 @@ C 操作(具体版本具体分析)<br>
 使用数组：￥list['name']</p>
 <p>select():查询多条数据（二维数组）<br>
 使用数组：￥list[￥k]['name']</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[试题解析答案-问答库]]></title>
-        <id>https://qiyulong.top/post/shi-ti-jie-xi-da-an-wen-da-ku/</id>
-        <link href="https://qiyulong.top/post/shi-ti-jie-xi-da-an-wen-da-ku/">
-        </link>
-        <updated>2020-05-30T13:13:11.000Z</updated>
-        <content type="html"><![CDATA[<p>https://www.asklib.com/</p>
 ]]></content>
     </entry>
 </feed>
