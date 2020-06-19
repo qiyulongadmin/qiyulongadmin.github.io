@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-18T09:48:17.649Z</updated>
+    <updated>2020-06-19T04:06:59.972Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[win2003安装IIS服务并配置WEB站点]]></title>
+        <id>https://qiyulong.top/post/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian/</id>
+        <link href="https://qiyulong.top/post/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian/">
+        </link>
+        <updated>2020-06-19T03:52:34.000Z</updated>
+        <content type="html"><![CDATA[<p>点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。</p>
+<p>可参考：https://blog.csdn.net/zhangliu463884153/article/details/80029060</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[win2003渗透环境]]></title>
         <id>https://qiyulong.top/post/win2003-shen-tou-huan-jing/</id>
@@ -229,18 +239,6 @@ A 理解：</p>
 <h1 id="c-操作具体版本具体分析推荐wwwbaiducom">===============================================================<br>
 C 操作(具体版本具体分析)<br>
 推荐：www.baidu.com</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[find()与select()]]></title>
-        <id>https://qiyulong.top/post/findyu-select/</id>
-        <link href="https://qiyulong.top/post/findyu-select/">
-        </link>
-        <updated>2020-05-30T16:59:58.000Z</updated>
-        <content type="html"><![CDATA[<p>find(￥id):查询一条数据（一维数组）注意：find必须要含有变量，根据此id查询一条数据。<br>
-使用数组：￥list['name']</p>
-<p>select():查询多条数据（二维数组）<br>
-使用数组：￥list[￥k]['name']</p>
 ]]></content>
     </entry>
 </feed>
