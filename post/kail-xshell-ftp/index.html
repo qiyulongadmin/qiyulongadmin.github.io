@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>VM tools安装 | 吃小熊的霸王龙</title>
+<title>kail-xshell-ftp | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,9 +18,11 @@
 
 
 
-    <meta name="description" content="安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。
-win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。
-kail有独特的方法：参考：https://jingyan.baidu.com..." />
+    <meta name="description" content="1、是否打开ssh  服务?
+2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务
+service ssh start
+service postgresql start
+解决以上问题..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -86,31 +88,58 @@ kail有独特的方法：参考：https://jingyan.baidu.com..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">VM tools安装</h2>
-            <div class="post-date">2020-06-02</div>
+            <h2 class="post-title">kail-xshell-ftp</h2>
+            <div class="post-date">2020-06-22</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/vm-tools-an-zhuang.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/kail-xshell-ftp.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。<br>
-win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。</p>
-<p>kail有独特的方法：参考：https://jingyan.baidu.com/article/4b07be3c9de29248b380f3f9.html<br>
-将文件内的VMtools压缩包放在home文件内使用命令进行解压并配置：<br>
-1.解压命令： tar -zxvf 加压缩包名<br>
-2.进入指定文件夹：cd vmware-tools-distrib<br>
-3.查看当前目录：ls<br>
-4.执行某个文件(直接输入文件名即可)：./vmware-install.real.pl(备注：一直回车yes即可)<br>
-5.重启：reboot</p>
+              <p>1、是否打开ssh  服务?</p>
+<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
+<h1 id="service-ssh-start">service ssh start</h1>
+<h1 id="service-postgresql-start">service postgresql start</h1>
+<p>解决以上问题 就能顺利连接xshell。</p>
+<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
+修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
+<p>vim /etc/ssh/sshd_config<br>
+1<br>
+找到代码</p>
+<h1 id="authentication">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin prohibit-password<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+<p>改成</p>
+<h1 id="authentication-2">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin yes<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+然后输入命令</p>
+<p>/etc/init.d/ssh restart<br>
+1<br>
+重启ssh服务即可。</p>
+<!-- more -->
+<p>————————————————<br>
+版权声明：本文为CSDN博主「WDK2017」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/yemaxq/java/article/details/78171241</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/kail-xi-tong-geng-xin/">
+                <a href="https://qiyulong.top/post/kill-msf/">
                   <h3 class="post-title">
-                    Kail系统更新
+                    kill-msf
                   </h3>
                 </a>
               </div>

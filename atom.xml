@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-19T04:06:59.972Z</updated>
+    <updated>2020-06-23T02:48:55.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,135 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[PHP学习]]></title>
+        <id>https://qiyulong.top/post/php-xue-xi/</id>
+        <link href="https://qiyulong.top/post/php-xue-xi/">
+        </link>
+        <updated>2020-06-23T01:13:21.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.bilibili.com/video/BV1PE411T7BQ</p>
+<p>swool p816-p831</p>
+<p>redis p832-871</p>
+<p>memcached p872-p891</p>
+<p>websocket p892</p>
+<p>项目：之后全部</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[各语言学习推荐]]></title>
+        <id>https://qiyulong.top/post/ge-yu-yan-xue-xi-tui-jian/</id>
+        <link href="https://qiyulong.top/post/ge-yu-yan-xue-xi-tui-jian/">
+        </link>
+        <updated>2020-06-23T00:48:14.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.jianshu.com/c/5eb029a22314<br>
+仅供参考，自行物色</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kail-xshell-ftp]]></title>
+        <id>https://qiyulong.top/post/kail-xshell-ftp/</id>
+        <link href="https://qiyulong.top/post/kail-xshell-ftp/">
+        </link>
+        <updated>2020-06-22T07:32:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>1、是否打开ssh  服务?</p>
+<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
+<h1 id="service-ssh-start">service ssh start</h1>
+<h1 id="service-postgresql-start">service postgresql start</h1>
+<p>解决以上问题 就能顺利连接xshell。</p>
+<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
+修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
+<p>vim /etc/ssh/sshd_config<br>
+1<br>
+找到代码</p>
+<h1 id="authentication">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin prohibit-password<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+<p>改成</p>
+<h1 id="authentication-2">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin yes<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+然后输入命令</p>
+<p>/etc/init.d/ssh restart<br>
+1<br>
+重启ssh服务即可。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1、是否打开ssh  服务?</p>
+<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
+<h1 id="service-ssh-start">service ssh start</h1>
+<h1 id="service-postgresql-start">service postgresql start</h1>
+<p>解决以上问题 就能顺利连接xshell。</p>
+<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
+修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
+<p>vim /etc/ssh/sshd_config<br>
+1<br>
+找到代码</p>
+<h1 id="authentication">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin prohibit-password<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+<p>改成</p>
+<h1 id="authentication-2">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin yes<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+然后输入命令</p>
+<p>/etc/init.d/ssh restart<br>
+1<br>
+重启ssh服务即可。</p>
+<!-- more -->
+<p>————————————————<br>
+版权声明：本文为CSDN博主「WDK2017」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/yemaxq/java/article/details/78171241</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kill-msf]]></title>
+        <id>https://qiyulong.top/post/kill-msf/</id>
+        <link href="https://qiyulong.top/post/kill-msf/">
+        </link>
+        <updated>2020-06-22T06:59:14.000Z</updated>
+        <content type="html"><![CDATA[<p>1.命令行启动msf<br>
+msfconsole<br>
+2.查询某个漏洞（ms代表微软，08年6月）<br>
+search ms08-067<br>
+3.进入模块<br>
+use +名称<br>
+4.查看相关信息<br>
+info</p>
+<p>查看木马程序payloads<br>
+show payloads</p>
+<p>监听,若有漏洞返回一个shell<br>
+exploit</p>
+<p>1.命令行启动msf<br>
+msfconsole<br>
+2.启动数据库<br>
+systemctl start postgresql<br>
+3.允许开机自启<br>
+systemctl enable postgresql<br>
+4.构建数据库缓存后启动msf<br>
+msfdb init</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[win2003安装IIS服务并配置WEB站点]]></title>
         <id>https://qiyulong.top/post/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian/</id>
@@ -105,140 +234,6 @@ win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重
 3.查看当前目录：ls<br>
 4.执行某个文件(直接输入文件名即可)：./vmware-install.real.pl(备注：一直回车yes即可)<br>
 5.重启：reboot</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kail系统更新]]></title>
-        <id>https://qiyulong.top/post/kail-xi-tong-geng-xin/</id>
-        <link href="https://qiyulong.top/post/kail-xi-tong-geng-xin/">
-        </link>
-        <updated>2020-06-02T14:50:58.000Z</updated>
-        <content type="html"><![CDATA[<p>========================================================<br>
-添加kali更新源<br>
-<img src="https://qiyulong.top/post-images/1591110161156.png" alt="" loading="lazy"><br>
-1.更新软件源：</p>
-<p>root权限：<br>
-leafpad /etc/apt/sources.list<br>
-（在Linux系统中 vim上边的/etc/apt/sources.list文件，添加下面的代码保存即可）</p>
-<p>然后添加以下较快的源：</p>
-<p>deb http://http.kali.org/kali kali main non-free contrib<br>
-deb-src http://http.kali.org/kali kali main non-free contrib<br>
-deb http://security.kali.org/kali-security kali/updates main contrib non-free<br>
-deb http://ftp.sjtu.edu.cn/debian wheezy main non-free contrib<br>
-deb-src http://ftp.sjtu.edu.cn/debian wheezy main non-free contrib<br>
-deb http://ftp.sjtu.edu.cn/debian wheezy-proposed-updates main non-free contrib<br>
-deb-src http://ftp.sjtu.edu.cn/debian wheezy-proposed-updates main non-free contrib<br>
-deb http://ftp.sjtu.edu.cn/debian-security wheezy/updates main non-free contrib<br>
-deb-src http://ftp.sjtu.edu.cn/debian-security wheezy/updates main non-free contrib<br>
-deb http://mirrors.163.com/debian wheezy main non-free contrib<br>
-deb-src http://mirrors.163.com/debian wheezy main non-free contrib<br>
-deb http://mirrors.163.com/debian wheezy-proposed-updates main non-free contrib<br>
-deb-src http://mirrors.163.com/debian wheezy-proposed-updates main non-free contrib<br>
-deb-src http://mirrors.163.com/debian-security wheezy/updates main non-free contrib<br>
-deb http://mirrors.163.com/debian-security wheezy/updates main non-free contrib<br>
-保存之后运行：apt-get update</p>
-<p>2.kali-linux安装中文输入法（以下任意选择一种安装）：<br>
-apt-get install fcitx-table-wbpy ttf-wqy-microhei ttf-wqy-zenhei                        #拼音五笔<br>
-apt-get install ibus ibus-pinyin              #经典的ibus<br>
-apt-get install fcitx fcitx-pinyin fcitx-module-cloudpinyin fcitx-googlepinyin                #fcitx拼音</p>
-<p>注销，重新登录之后才可以使用。</p>
-<p>========================================================<br>
-镜像下载：https://pan.baidu.com/s/190nw5pt7uedyHOrH5tTAWQ 提取码：yyln</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VM镜像官方下载地址]]></title>
-        <id>https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/</id>
-        <link href="https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/">
-        </link>
-        <updated>2020-06-02T02:14:02.000Z</updated>
-        <content type="html"><![CDATA[<p>http://msdn.itellyou.cn/<br>
-迅雷下载</p>
-<p>===================================================<br>
-win2003<br>
-cn_win_srv_2003_r2_enterprise_with_sp2_vl_cd1_X13-46432（版本：企业版）<br>
-秘钥：<br>
-MDGJK-PF6YQ-PD8DJ-RFQVM-7WKWG<br>
-QV9XT-CV22K-D8MGR-4MD86-8MYR6<br>
-VB96B-VFG8F-74XWJ-W67Q7-8X82B<br>
-M6F6D-VFQWH-CGWRB-RC7JR-VCV4W<br>
-C49DP-CPHCB-MDGP3-MG334-W2V4W<br>
-DR4B3-66VPQ-CK3VB-Y3BPY-2CJ2G<br>
-JYCJX-CHTJX-RGH97-86WM9-RB6B6<br>
-MVDYF-X7FBW-H29XT-TCKWW-RBYRT<br>
-BXJXT-9F88V-XXQWV-3MWMG-FYDJT<br>
-MHFT3-YGHV4-G86P4-KQXJ3-GYH4W<br>
-HXCRB-TQW9R-42JK8-TQ7X2-PJRDY</p>
-<p>安装后：在控制面板的添加删除Windows组件中关闭浏览器安全，避免每次访问都会提示安全问题。</p>
-<p>网络连接问题：(常用1.NAT及2.桥接)<br>
-1.使用VMnet8可以组建局域网使用(不可做服务器不可联网)，主机和虚拟机可以相互ping通（VMnet8的ipv4）。<br>
-2.直连物理网络有两种方式。<br>
-aaa:第一种方式是将虚拟机的网络设置为桥接Bridge。这种模式下，虚拟机就可以获取实体网络中路由器分配的独立IP地址，从而连入实体网络。这时，虚拟机和物理机通过同一根网线接入路由器设备，共享路由器的同一个端口。<br>
-在我们以前的端口偷窃（Port Stealing）文章中提到，同一个端口只会和同一个IP地址进行绑定。如果虚拟机不发包，而实体机发包，路由器默认该端口绑定的是实体机。这时，如果有其他设备访问虚拟机的IP，就会出现无法响应的情况。这也是使用桥接方式的虚拟机，经常无法被其他实体机发现的原因。<br>
-bbb:为了网络稳定，可以采用第二种方式。第二种方式就是使用USB接口的有线网卡。让虚拟机直接使用USB有线网卡，而该有线网卡使用独立一根网线连接路由设备。这样避免了端口抢夺问题。</p>
-<p>备注：<br>
-NAT方法：配置主机的VMint8-&gt;配置虚拟机的VMint8(ip网段与主机VMint8网段一致)-&gt;虚拟机服务器网络适配器选择NAT链接-&gt;进入虚拟机服务器配置ip（ip网段与主机VMint8网段一致）。</p>
-<p>桥接方法：1.虚拟机-&gt;编辑-&gt;虚拟网络编辑器-&gt;更改配置（右下角）-&gt;VMnet0修改桥接模式并桥接至与主机联网描述一致的选项（如下图）-&gt;确定。<br>
-<img src="https://qiyulong.top/post-images/1591080262276.png" alt="" loading="lazy"><br>
-<img src="https://qiyulong.top/post-images/1591081101453.png" alt="" loading="lazy"><br>
-2.选择一个虚拟机服务器（开启的）右键设置-&gt;网络适配器-&gt;勾选前四个（已连接、启动时链接、桥接模式、复制物理网络链接状态）<br>
-3.进入虚拟机服务器后右键网上邻居打开属性-&gt;右键本地连接属性-&gt;双击Internet 协议（TCP/IP）-&gt;IP地址与主机ipv4同一网段即可，默认网关192.168.1.1，DNS与主机一样（备用填8.8.8.8（谷歌DNS服务器））-&gt;确定-&gt;打开cmd-&gt;ping www.baidu.com返回4个数据丢失0即完成联网配置。</p>
-<p><strong>（详细步骤可参考（桥接）：https://blog.csdn.net/vicoqi/article/details/79951236）</strong></p>
-<p>===================================================<br>
-kail桥接联接wife使用命令配置kail的ipv4:<br>
-1.配置ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
-<img src="https://qiyulong.top/post-images/1592187684298.png" alt="" loading="lazy"><br>
-代码：<br>
-auto eth0<br>
-iface eth0 inet static<br>
-address 192.168.x.x<br>
-gateway 192.168.x.x<br>
-netmask 255.255.255.0</p>
-<p>2.配置DNS：gedit /etc/resolv.conf<br>
-<img src="https://qiyulong.top/post-images/1592187720787.png" alt="" loading="lazy"><br>
-代码：<br>
-nameserver 8.8.8.8<br>
-nameserver 223.5.5.5<br>
-nameserver 180.76.76.76<br>
-备注：<br>
-8.8.8.8是谷歌的IP地址<br>
-223.5.5.5是阿里云的IP地址<br>
-180.76.76.87是百度的IP地址</p>
-<p>3.启动eth0：ifconfig eth0 up</p>
-<p>4.重启网络：service networking restart</p>
-<p>5.检验成果：ifconfig 发现eth0的IP地址出现了。ping www.baidu.com ,成功返回。打开KALI浏览器，访问成功。<br>
-<img src="https://qiyulong.top/post-images/1592187962539.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[网络安全-web安全]]></title>
-        <id>https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/</id>
-        <link href="https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/">
-        </link>
-        <updated>2020-06-02T01:12:37.000Z</updated>
-        <content type="html"><![CDATA[<p>学习平台推荐：https://www.51cto.com/</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[磁盘挂载]]></title>
-        <id>https://qiyulong.top/post/ci-pan-gua-zai/</id>
-        <link href="https://qiyulong.top/post/ci-pan-gua-zai/">
-        </link>
-        <updated>2020-06-01T09:13:55.000Z</updated>
-        <content type="html"><![CDATA[<p>===============================================================<br>
-A 理解：</p>
-<p>在windwos中分区是以C、D、E、F等盘符来体现。</p>
-<h1 id="而对linux来说磁盘设备也是一个文件而磁盘分区固然也是一个文件要将这个文件放置在哪个目录或者说哪个目录为分区的入口这个设置过程被称为挂载而该目录被称为挂载点">而对Linux来说磁盘设备也是一个文件，而磁盘分区固然也是一个文件，要将这个文件放置在哪个目录，或者说哪个目录为分区的入口，这个设置过程被称为挂载，而该目录被称为挂载点。</h1>
-<p>B 分区的意义、好处：</p>
-<p>1）数据的安全性</p>
-<pre><code>每个分区是独立且相互不影响的，对某个分区的数据进行格式化时不会影响其他分区，如我们重装系统时对C盘的数据进行格式化，并不会影响到其他盘。
-</code></pre>
-<p>2）提供系统的IO性能</p>
-<pre><code>将数据存入一个连续柱面的分区块或者从中读取，比起不分区从不连续的扇区写入和读取，IO性能更快。
-</code></pre>
-<h1 id="c-操作具体版本具体分析推荐wwwbaiducom">===============================================================<br>
-C 操作(具体版本具体分析)<br>
-推荐：www.baidu.com</h1>
 ]]></content>
     </entry>
 </feed>
