@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>win2003安装IIS服务并配置WEB站点 | 吃小熊的霸王龙</title>
+<title>msf基本命令 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,12 @@
 
 
 
-    <meta name="description" content="点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。
-可参考：https://blog.csdn.net/z..." />
+    <meta name="description" content="命令行启动msf
+msfconsole
+搜索命令(search)：
+search cve (注：含有excellent的模块可以直接用)
+进入模块(use):
+use exploit/windows/smb/ms09_050_smb2_ne..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -85,24 +89,77 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">win2003安装IIS服务并配置WEB站点</h2>
-            <div class="post-date">2020-06-19</div>
+            <h2 class="post-title">msf基本命令</h2>
+            <div class="post-date">2020-06-23</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/msf-ji-ben-ming-ling.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。</p>
-<p>可参考：https://blog.csdn.net/zhangliu463884153/article/details/80029060</p>
+              <p>命令行启动msf<br>
+msfconsole</p>
+<p>搜索命令(search)：<br>
+search cve (注：含有excellent的模块可以直接用)</p>
+<p>进入模块(use):<br>
+use exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>检测(check):<br>
+check</p>
+<p>返回上一级(back):<br>
+back</p>
+<p>查看msf信息(banner):<br>
+banner</p>
+<p>链接一个主机(connect):<br>
+connect www.baidu.com</p>
+<p>显示一个或多个模块的信息(info):<br>
+info exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>进入irb脚本(irb):<br>
+irb</p>
+<p>显示和管理作业(jobs):<br>
+jobs<br>
+(备注：和Windows任务管理器的进程作用一样)</p>
+<p>杀死一个进程(kill):<br>
+kill<br>
+(和结束进程的作用一样)</p>
+<p>加载一个模块的路径(loadpath):<br>
+loadpath exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>退出msf(quit):<br>
+quit</p>
+<p>加载一个插件(load):<br>
+load</p>
+<p>运行存储一个文件中的命令(resource):<br>
+resource</p>
+<p>查看一个会话的路由信息(route):<br>
+route</p>
+<p>保存动作(save):<br>
+save</p>
+<p>给一个变量赋值(set):<br>
+set</p>
+<p>显示所有类型的模块(show):<br>
+show options</p>
+<p>把一个赋值给全局变量(setg):<br>
+setg<br>
+(备注：例如上述 set设置的IP,就会用到他攻击模块的RHOST中)</p>
+<p>在限定的秒数内什么也不做(sleep):<br>
+sleep</p>
+<p>卸载一个模块(unload):<br>
+unload</p>
+<p>解出一个或多个变量(unset):<br>
+unset</p>
+<p>解出一个或多个全局变量(unsetg):<br>
+unsetg</p>
+<p>显示msf和控制台库版本(version):<br>
+version</p>
+<p>监听,若有漏洞返回一个shell(exploit):<br>
+exploit</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/win2003-shen-tou-huan-jing/">
+                <a href="https://qiyulong.top/post/php-xue-xi/">
                   <h3 class="post-title">
-                    win2003渗透环境
+                    PHP学习
                   </h3>
                 </a>
               </div>

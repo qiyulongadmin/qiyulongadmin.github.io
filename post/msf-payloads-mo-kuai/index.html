@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>win2003安装IIS服务并配置WEB站点 | 吃小熊的霸王龙</title>
+<title>msf-payloads模块 | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,8 +18,15 @@
 
 
 
-    <meta name="description" content="点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。
-可参考：https://blog.csdn.net/z..." />
+    <meta name="description" content="show payloads
+搜索模块：
+search ms08
+进入模块：
+use exploit/windows/smb/smb_relay
+查看信息：
+show options
+RHOST:目标主机IP地址
+RPORT:目标主机链接端口..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -85,24 +92,34 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">win2003安装IIS服务并配置WEB站点</h2>
-            <div class="post-date">2020-06-19</div>
+            <h2 class="post-title">msf-payloads模块</h2>
+            <div class="post-date">2020-06-23</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/msf-payloads-mo-kuai.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。</p>
-<p>可参考：https://blog.csdn.net/zhangliu463884153/article/details/80029060</p>
+              <p>show payloads</p>
+<p>搜索模块：<br>
+search ms08</p>
+<p>进入模块：<br>
+use exploit/windows/smb/smb_relay</p>
+<p>查看信息：<br>
+show options</p>
+<p>RHOST:目标主机IP地址<br>
+RPORT:目标主机链接端口<br>
+Payload:有效的载荷，成功后返回shell<br>
+LHOST:攻击者的IP地址<br>
+LPORT:攻击者的端口</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/win2003-shen-tou-huan-jing/">
+                <a href="https://qiyulong.top/post/msf-ji-ben-ming-ling/">
                   <h3 class="post-title">
-                    win2003渗透环境
+                    msf基本命令
                   </h3>
                 </a>
               </div>
