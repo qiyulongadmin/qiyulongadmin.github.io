@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-23T04:06:25.608Z</updated>
+    <updated>2020-06-24T01:57:34.512Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[OWASP国外安全组织]]></title>
+        <id>https://qiyulong.top/post/owasp-guo-wai-an-quan-zu-zhi/</id>
+        <link href="https://qiyulong.top/post/owasp-guo-wai-an-quan-zu-zhi/">
+        </link>
+        <updated>2020-06-24T01:55:29.000Z</updated>
+        <content type="html"><![CDATA[<p>每年都会公布年度十大漏洞。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kali判断web环境]]></title>
+        <id>https://qiyulong.top/post/kali-pan-duan-web-huan-jing/</id>
+        <link href="https://qiyulong.top/post/kali-pan-duan-web-huan-jing/">
+        </link>
+        <updated>2020-06-24T01:18:30.000Z</updated>
+        <content type="html"><![CDATA[<p>命令：<br>
+whatweb www.baidu.com<br>
+即可查询百度的ip等web环境</p>
+<p>-h:帮助<br>
+whatweb -h<br>
+可查询此命令的意思</p>
+<p>-v:查看详情<br>
+whatweb -v www.baidu.com<br>
+更规范详细的展示web环境</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[网络服务器攻击渗透(MS08-067)]]></title>
         <id>https://qiyulong.top/post/wang-luo-fu-wu-qi-gong-ji-shen-tou-ms08-067/</id>
@@ -252,40 +278,6 @@ msfdb init</p>
         <updated>2020-06-19T03:52:34.000Z</updated>
         <content type="html"><![CDATA[<p>点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。</p>
 <p>可参考：https://blog.csdn.net/zhangliu463884153/article/details/80029060</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[win2003渗透环境]]></title>
-        <id>https://qiyulong.top/post/win2003-shen-tou-huan-jing/</id>
-        <link href="https://qiyulong.top/post/win2003-shen-tou-huan-jing/">
-        </link>
-        <updated>2020-06-18T01:28:07.000Z</updated>
-        <content type="html"><![CDATA[<p>1.安装PHPstudent。<br>
-2.安装webug靶场。下载后打开Windows Server 2003 Standard Edition.vmx（打开方式：VMware）。<br>
-3.下载pikachu。将文件放在www目录下，打开后查看（配置config文件里的数据库链接账号密码），然后打开install.php文件即可安装。<br>
-4.下载dvwa。将文件放在www目录下，打开查看（配置config文件里的数据库链接账号密码），然后进入页面底端点击创建数据库，默认账号admin密码password。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重装系统win7]]></title>
-        <id>https://qiyulong.top/post/chong-zhuang-xi-tong-win7/</id>
-        <link href="https://qiyulong.top/post/chong-zhuang-xi-tong-win7/">
-        </link>
-        <updated>2020-06-11T02:39:48.000Z</updated>
-        <content type="html"><![CDATA[<p>1.插入PE盘，启动计算机，按F12或者F8选择自己的PE盘进入。<br>
-2.备份系统盘文件。<br>
-3.格式化系统盘。<br>
-4.重装系统，选择镜像。<br>
-5.执行后选择格式化分区、网卡驱动、USB3驱动，完成后重启，重启黑屏后拔出U盘。</p>
-<p>开机后：<br>
-1.联网方式：<br>
-a.手机共享：使用数据线链接电脑，手机设置-&gt;移动网络-&gt;移动网络共享-&gt;打开USB共享网络，电脑即可联网。<br>
-b..网线连接：插入网线，若是局域网需要配置ipv4：找一台已连接的电脑在网络和共享中心查看ip、子网掩码、默认网关、DNS。配置待连接数据，注意ip不可相同，但要在同一网段。<br>
-c..wife连接：需要无线网卡，插入网卡即可链接wife。注意需要有驱动。<br>
-2.右键桌面，主题里桌面图标设置，勾选需要显示在桌面的图标。<br>
-3.安装安全软件如电脑管家。安装驱动精灵安装电脑欠缺驱动，驱动全部安装完后手动重启。<br>
-4.重启后下载需要的软件。<br>
-5.链接打印机：搜索打印机，添加打印机并进行搜索，搜索后双击设备安装驱动即可打印（电脑ip需要与打印机同一网段）。若搜不到打印机，找一台已连接的电脑，cmd进入ipconfig查看ip，然后用未连接打印机的电脑搜索\192.168.XXX.XXX进行连接下载驱动即可完成连接。</p>
 ]]></content>
     </entry>
 </feed>
