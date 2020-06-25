@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-24T01:57:34.512Z</updated>
+    <updated>2020-06-25T08:38:16.197Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[注入工具sqlmap使用]]></title>
+        <id>https://qiyulong.top/post/zhu-ru-gong-ju-sqlmap-shi-yong/</id>
+        <link href="https://qiyulong.top/post/zhu-ru-gong-ju-sqlmap-shi-yong/">
+        </link>
+        <updated>2020-06-25T08:34:29.000Z</updated>
+        <content type="html"><![CDATA[<p>需求：Python环境，https://www.python.org/<br>
+SQLmap，http://sqlmap.org/</p>
+<p>安装Python，将SQLmap文件放在Python目录中，进入命令行打开SQLmap文件，最终执行命令：<br>
+sqlmap.py</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[国际公认渗透工具]]></title>
+        <id>https://qiyulong.top/post/guo-ji-gong-ren-shen-tou-gong-ju/</id>
+        <link href="https://qiyulong.top/post/guo-ji-gong-ren-shen-tou-gong-ju/">
+        </link>
+        <updated>2020-06-25T08:20:29.000Z</updated>
+        <content type="html"><![CDATA[<p>sectools.org</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[OWASP国外安全组织]]></title>
         <id>https://qiyulong.top/post/owasp-guo-wai-an-quan-zu-zhi/</id>
@@ -240,44 +261,6 @@ StrictModes yes<br>
 <p>————————————————<br>
 版权声明：本文为CSDN博主「WDK2017」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
 原文链接：https://blog.csdn.net/yemaxq/java/article/details/78171241</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kill-msf]]></title>
-        <id>https://qiyulong.top/post/kill-msf/</id>
-        <link href="https://qiyulong.top/post/kill-msf/">
-        </link>
-        <updated>2020-06-22T06:59:14.000Z</updated>
-        <content type="html"><![CDATA[<p>1.命令行启动msf<br>
-msfconsole<br>
-2.查询某个漏洞（ms代表微软，08年6月）<br>
-search ms08-067<br>
-3.进入模块<br>
-use +名称<br>
-4.查看相关信息<br>
-info</p>
-<p>查看木马程序payloads<br>
-show payloads</p>
-<p>监听,若有漏洞返回一个shell<br>
-exploit</p>
-<p>1.命令行启动msf<br>
-msfconsole<br>
-2.启动数据库<br>
-systemctl start postgresql<br>
-3.允许开机自启<br>
-systemctl enable postgresql<br>
-4.构建数据库缓存后启动msf<br>
-msfdb init</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[win2003安装IIS服务并配置WEB站点]]></title>
-        <id>https://qiyulong.top/post/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian/</id>
-        <link href="https://qiyulong.top/post/win2003-an-zhuang-iis-fu-wu-bing-pei-zhi-web-zhan-dian/">
-        </link>
-        <updated>2020-06-19T03:52:34.000Z</updated>
-        <content type="html"><![CDATA[<p>点击右下角光盘链接镜像最小化，控制面板-&gt;添加或删除程序-&gt;添加/删除Windows组件-&gt;选中应用程序服务器-&gt;点击详细信息-&gt;勾选ASP.NET确定。</p>
-<p>可参考：https://blog.csdn.net/zhangliu463884153/article/details/80029060</p>
 ]]></content>
     </entry>
 </feed>
