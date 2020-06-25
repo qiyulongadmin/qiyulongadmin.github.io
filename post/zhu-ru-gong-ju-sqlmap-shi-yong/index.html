@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1593074287047">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1593076510382">
 <link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
 
 
@@ -31,7 +31,7 @@ sqlm..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://qiyulong.top">
-        <img src="https://qiyulong.top/images/avatar.png?v=1593074287047" class="site-logo">
+        <img src="https://qiyulong.top/images/avatar.png?v=1593076510382" class="site-logo">
         <h1 class="site-title">吃小熊的霸王龙</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,6 +98,10 @@ sqlm..." />
 SQLmap，http://sqlmap.org/</p>
 <p>安装Python，将SQLmap文件放在Python目录中，进入命令行打开SQLmap文件，最终执行命令：<br>
 sqlmap.py</p>
+<p>使用：<br>
+检测注入点：sqlmap.py -u &quot;http://127.0.0.1/news?id=16&quot;<br>
+猜解表名：sqlmap.py -u &quot;sqlmap.py -u http://127.0.0.1/news?id=16&quot; --tables</p>
+<p>若在kali中，已集成好，命令：sqlmap</p>
 
             </div>
             

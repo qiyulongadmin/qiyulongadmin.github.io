@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-25T08:38:16.197Z</updated>
+    <updated>2020-06-25T09:28:58.334Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[kali大部分工具存放位置]]></title>
+        <id>https://qiyulong.top/post/kali-da-bu-fen-gong-ju-cun-fang-wei-zhi/</id>
+        <link href="https://qiyulong.top/post/kali-da-bu-fen-gong-ju-cun-fang-wei-zhi/">
+        </link>
+        <updated>2020-06-25T09:11:40.000Z</updated>
+        <content type="html"><![CDATA[<p>use/share</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[注入工具sqlmap使用]]></title>
         <id>https://qiyulong.top/post/zhu-ru-gong-ju-sqlmap-shi-yong/</id>
@@ -20,6 +29,10 @@
 SQLmap，http://sqlmap.org/</p>
 <p>安装Python，将SQLmap文件放在Python目录中，进入命令行打开SQLmap文件，最终执行命令：<br>
 sqlmap.py</p>
+<p>使用：<br>
+检测注入点：sqlmap.py -u &quot;http://127.0.0.1/news?id=16&quot;<br>
+猜解表名：sqlmap.py -u &quot;sqlmap.py -u http://127.0.0.1/news?id=16&quot; --tables</p>
+<p>若在kali中，已集成好，命令：sqlmap</p>
 ]]></content>
     </entry>
     <entry>
@@ -184,83 +197,6 @@ exploit</p>
         <updated>2020-06-23T00:48:14.000Z</updated>
         <content type="html"><![CDATA[<p>https://www.jianshu.com/c/5eb029a22314<br>
 仅供参考，自行物色</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kail-xshell-ftp]]></title>
-        <id>https://qiyulong.top/post/kail-xshell-ftp/</id>
-        <link href="https://qiyulong.top/post/kail-xshell-ftp/">
-        </link>
-        <updated>2020-06-22T07:32:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>1、是否打开ssh  服务?</p>
-<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
-<h1 id="service-ssh-start">service ssh start</h1>
-<h1 id="service-postgresql-start">service postgresql start</h1>
-<p>解决以上问题 就能顺利连接xshell。</p>
-<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
-修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
-<p>vim /etc/ssh/sshd_config<br>
-1<br>
-找到代码</p>
-<h1 id="authentication">Authentication:</h1>
-<p>LoginGraceTime 120<br>
-PermitRootLogin prohibit-password<br>
-StrictModes yes<br>
-1<br>
-2<br>
-3<br>
-4<br>
-5</p>
-<p>改成</p>
-<h1 id="authentication-2">Authentication:</h1>
-<p>LoginGraceTime 120<br>
-PermitRootLogin yes<br>
-StrictModes yes<br>
-1<br>
-2<br>
-3<br>
-4<br>
-然后输入命令</p>
-<p>/etc/init.d/ssh restart<br>
-1<br>
-重启ssh服务即可。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>1、是否打开ssh  服务?</p>
-<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
-<h1 id="service-ssh-start">service ssh start</h1>
-<h1 id="service-postgresql-start">service postgresql start</h1>
-<p>解决以上问题 就能顺利连接xshell。</p>
-<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
-修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
-<p>vim /etc/ssh/sshd_config<br>
-1<br>
-找到代码</p>
-<h1 id="authentication">Authentication:</h1>
-<p>LoginGraceTime 120<br>
-PermitRootLogin prohibit-password<br>
-StrictModes yes<br>
-1<br>
-2<br>
-3<br>
-4<br>
-5</p>
-<p>改成</p>
-<h1 id="authentication-2">Authentication:</h1>
-<p>LoginGraceTime 120<br>
-PermitRootLogin yes<br>
-StrictModes yes<br>
-1<br>
-2<br>
-3<br>
-4<br>
-然后输入命令</p>
-<p>/etc/init.d/ssh restart<br>
-1<br>
-重启ssh服务即可。</p>
-<!-- more -->
-<p>————————————————<br>
-版权声明：本文为CSDN博主「WDK2017」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
-原文链接：https://blog.csdn.net/yemaxq/java/article/details/78171241</p>
 ]]></content>
     </entry>
 </feed>
