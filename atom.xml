@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-25T13:05:46.030Z</updated>
+    <updated>2020-06-26T01:58:14.512Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -27,7 +27,8 @@
         <updated>2020-06-25T08:34:29.000Z</updated>
         <content type="html"><![CDATA[<p>需求：Python环境，https://www.python.org/<br>
 SQLmap，http://sqlmap.org/</p>
-<p>安装Python，将SQLmap文件放在Python目录中，进入命令行打开SQLmap文件，最终执行命令：<br>
+<p>安装Python（推荐：https://blog.csdn.net/nmjuzi/article/details/79075736），<br>
+将SQLmap文件放在Python目录中，使用cmd命令打开SQLmap文件，最终执行命令：<br>
 sqlmap.py</p>
 <p>使用：<br>
 检测注入点：sqlmap.py -u &quot;http://127.0.0.1/news?id=16&quot;<br>

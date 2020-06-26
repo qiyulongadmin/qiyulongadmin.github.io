@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1593090308930">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1593136678650">
 <link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
 
 
@@ -32,7 +32,7 @@ cn_win_srv_2003_r2_enterprise_..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://qiyulong.top">
-        <img src="https://qiyulong.top/images/avatar.png?v=1593090308930" class="site-logo">
+        <img src="https://qiyulong.top/images/avatar.png?v=1593136678650" class="site-logo">
         <h1 class="site-title">吃小熊的霸王龙</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -113,7 +113,7 @@ BXJXT-9F88V-XXQWV-3MWMG-FYDJT<br>
 MHFT3-YGHV4-G86P4-KQXJ3-GYH4W<br>
 HXCRB-TQW9R-42JK8-TQ7X2-PJRDY</p>
 <p>安装后：在控制面板的添加删除Windows组件中关闭浏览器安全，避免每次访问都会提示安全问题。</p>
-<p>网络连接问题：(常用1.NAT及2.桥接)<br>
+<p>网络连接问题：(常用1.NAT(推荐)及2.桥接。NAT属于自动获取获取ip，桥接属于配置静态ip，使用NAT更便捷)<br>
 1.使用VMnet8可以组建局域网使用(不可做服务器不可联网)，主机和虚拟机可以相互ping通（VMnet8的ipv4）。<br>
 2.直连物理网络有两种方式。<br>
 aaa:第一种方式是将虚拟机的网络设置为桥接Bridge。这种模式下，虚拟机就可以获取实体网络中路由器分配的独立IP地址，从而连入实体网络。这时，虚拟机和物理机通过同一根网线接入路由器设备，共享路由器的同一个端口。<br>
@@ -129,7 +129,7 @@ NAT方法：配置主机的VMint8-&gt;配置虚拟机的VMint8(ip网段与主机
 <p><strong>（详细步骤可参考（桥接）：https://blog.csdn.net/vicoqi/article/details/79951236）</strong></p>
 <p>===================================================<br>
 kail桥接联接wife使用命令配置kail的ipv4:<br>
-1.配置ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
+1.配置静态ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
 <img src="https://qiyulong.top/post-images/1592187684298.png" alt="" loading="lazy"><br>
 代码：<br>
 auto eth0<br>
@@ -152,6 +152,17 @@ nameserver 180.76.76.76<br>
 <p>5.检验成果：ifconfig 发现eth0的IP地址出现了。ping www.baidu.com ,成功返回。打开KALI浏览器，访问成功。<br>
 (备注：ctrl+c取消一些，例如中断ping)<br>
 <img src="https://qiyulong.top/post-images/1592187962539.png" alt="" loading="lazy"></p>
+<p>kail NAT联接wife使用命令配置kail的ipv4:<br>
+1.自动获取ip、子网掩码、默认网关：gedit /etc/network/interfaces<br>
+代码：<br>
+auto eth0<br>
+iface eth0 inet dhcp</p>
+<p>2.配置DNS：gedit /etc/resolv.conf<br>
+nameserver 223.5.5.5<br>
+nameserver 180.76.76.76</p>
+<p>3.启动eth0：ifconfig eth0 up</p>
+<p>4.重启网络：service networking restart</p>
+<p>5.检验成果：ifconfig 发现eth0的IP地址出现了。ping www.baidu.com ,成功返回。打开KALI浏览器，访问成功。</p>
 
             </div>
             
