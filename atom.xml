@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-28T15:33:02.818Z</updated>
+    <updated>2020-06-30T04:04:07.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,62 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[JS篇]]></title>
+        <id>https://qiyulong.top/post/js-pian/</id>
+        <link href="https://qiyulong.top/post/js-pian/">
+        </link>
+        <updated>2020-06-30T00:43:39.000Z</updated>
+        <content type="html"><![CDATA[<p>js需要触发函数才可执行方法，不会自行执行方法。<br>
+1.隐藏select并更换显示select<br>
+html:<br>
+<div class="col-sm-2" id="style-lessons"><br>
+<select id="select_lessons" name="lessons_id" class="select2 style"><br>
+<option value="0">请选择(课程+班级)</option><br>
+<foreach name="lessons" item="dv"><br>
+<option value="{$dv.id}">({<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 8: dv.name}̲+{'>dv.name}+{</span>dv.major}{<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 9: dv.class}̲班+{'>dv.class}班+{</span>dv.college})</option><br>
+</foreach><br>
+</select><br>
+</div></p>
+<pre><code>				&lt;div id=&quot;style-lessons2&quot; class=&quot;col-sm-2&quot; style=&quot;display:none;&quot;&gt;
+				    &lt;select id=&quot;select_lessons2&quot; name=&quot;lessons_id&quot; class=&quot;select3 style&quot; &gt;
+				        &lt;option value=&quot;0&quot;&gt;请选择(课程+班级)&lt;/option&gt;
+				        &lt;foreach name=&quot;lessons&quot; item=&quot;dv&quot;&gt;
+				            &lt;option value=&quot;{$dv.id}&quot;&gt;({$dv.name}+{$dv.major}{$dv.class}班+{$dv.college})&lt;/option&gt;
+				        &lt;/foreach&gt;
+				    &lt;/select&gt;
+				&lt;/div&gt;
+</code></pre>
+<p>js:<br>
+1<br>
+document.getElementById(&quot;style-lessons&quot;).style.display=&quot;none&quot;;<br>
+document.getElementById(&quot;style-lessons2&quot;).style.display=&quot;block&quot;;<br>
+var mylist=document.getElementById(&quot;select_lessons2&quot;);<br>
+mylist.options[0].text=data.password;</p>
+<p>2<br>
+document.getElementById(&quot;style-majors&quot;).style.display=&quot;none&quot;;<br>
+document.getElementById(&quot;style-majors2&quot;).style.display=&quot;block&quot;;<br>
+// //将从后端接受的数组循环显示在前端<br>
+// $('#select_majors2 option[value!=&quot;&quot;]').remove();<br>
+// //计算返回数组的数目，并循环显示<br>
+// for (var i=0;i&lt;=data.password.length;i++) {<br>
+// //定义html标签，和显示的值，id和type_name为数据库中的字段名<br>
+// var option =&quot;<option value="+data.password[i].id+">&quot;+data.password[i].major+&quot;</option>&quot;;<br>
+// //显示的位置<br>
+// $(option).appendTo('#select_majors2');</p>
+<pre><code>						   // }
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二级联动]]></title>
+        <id>https://qiyulong.top/post/er-ji-lian-dong/</id>
+        <link href="https://qiyulong.top/post/er-ji-lian-dong/">
+        </link>
+        <updated>2020-06-29T03:41:44.000Z</updated>
+        <content type="html"><![CDATA[<p>二级</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[看云-现代化文档写作、托管及数字出版]]></title>
         <id>https://qiyulong.top/post/kan-yun-xian-dai-hua-wen-dang-xie-zuo-tuo-guan-ji-shu-zi-chu-ban/</id>
@@ -121,83 +177,6 @@ RPORT:目标主机链接端口<br>
 Payload:有效的载荷，成功后返回shell<br>
 LHOST:攻击者的IP地址<br>
 LPORT:攻击者的端口</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[msf基本命令]]></title>
-        <id>https://qiyulong.top/post/msf-ji-ben-ming-ling/</id>
-        <link href="https://qiyulong.top/post/msf-ji-ben-ming-ling/">
-        </link>
-        <updated>2020-06-23T02:49:18.000Z</updated>
-        <content type="html"><![CDATA[<p>命令行启动msf<br>
-msfconsole</p>
-<p>搜索命令(search)：<br>
-search cve (注：含有excellent的模块可以直接用)</p>
-<p>进入模块(use):<br>
-use exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
-<p>检测(check):<br>
-check</p>
-<p>返回上一级(back):<br>
-back</p>
-<p>查看msf信息(banner):<br>
-banner</p>
-<p>链接一个主机(connect):<br>
-connect www.baidu.com</p>
-<p>显示一个或多个模块的信息(info):<br>
-info exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
-<p>进入irb脚本(irb):<br>
-irb</p>
-<p>显示和管理作业(jobs):<br>
-jobs<br>
-(备注：和Windows任务管理器的进程作用一样)</p>
-<p>杀死一个进程(kill):<br>
-kill<br>
-(和结束进程的作用一样)</p>
-<p>加载一个模块的路径(loadpath):<br>
-loadpath exploit/windows/smb/ms09_050_smb2_negotiate_func_index</p>
-<p>退出msf(quit):<br>
-quit</p>
-<p>加载一个插件(load):<br>
-load</p>
-<p>运行存储一个文件中的命令(resource):<br>
-resource</p>
-<p>查看一个会话的路由信息(route):<br>
-route</p>
-<p>保存动作(save):<br>
-save</p>
-<p>给一个变量赋值(set):<br>
-set</p>
-<p>显示所有类型的模块(show):<br>
-show options</p>
-<p>把一个赋值给全局变量(setg):<br>
-setg<br>
-(备注：例如上述 set设置的IP,就会用到他攻击模块的RHOST中)</p>
-<p>在限定的秒数内什么也不做(sleep):<br>
-sleep</p>
-<p>卸载一个模块(unload):<br>
-unload</p>
-<p>解出一个或多个变量(unset):<br>
-unset</p>
-<p>解出一个或多个全局变量(unsetg):<br>
-unsetg</p>
-<p>显示msf和控制台库版本(version):<br>
-version</p>
-<p>监听,若有漏洞返回一个shell(exploit):<br>
-exploit</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PHP学习]]></title>
-        <id>https://qiyulong.top/post/php-xue-xi/</id>
-        <link href="https://qiyulong.top/post/php-xue-xi/">
-        </link>
-        <updated>2020-06-23T01:13:21.000Z</updated>
-        <content type="html"><![CDATA[<p>https://www.bilibili.com/video/BV1PE411T7BQ</p>
-<p>swool p816-p831</p>
-<p>redis p832-871</p>
-<p>memcached p872-p891</p>
-<p>websocket p892</p>
-<p>项目：之后全部</p>
 ]]></content>
     </entry>
 </feed>
