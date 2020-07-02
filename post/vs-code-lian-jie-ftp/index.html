@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>VM tools安装 | 吃小熊的霸王龙</title>
+<title>vs code链接ftp | 吃小熊的霸王龙</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,9 +18,12 @@
 
 
 
-    <meta name="description" content="安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。
-win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。
-kail有独特的方法：参考：https://jingyan.baidu.com..." />
+    <meta name="description" content="1.安装插件sftp
+2.ctrl+shift+p调出窗口输入sftp:config
+3.配置基本信息，代码如下
+{
+&quot;name&quot;:&quot;站点名称&quot;,
+&quot;host&quot;: &quot;IP..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -86,31 +89,35 @@ kail有独特的方法：参考：https://jingyan.baidu.com..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">VM tools安装</h2>
-            <div class="post-date">2020-06-02</div>
+            <h2 class="post-title">vs code链接ftp</h2>
+            <div class="post-date">2020-07-02</div>
             
-              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/vm-tools-an-zhuang.jpg')">
+              <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/vs-code-lian-jie-ftp.png')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>安装虚拟机服务器时的镜像换成VM软件所在目录的对应镜像（win对应win.ios）。<br>
-win安装完即可从主机复制文件至虚拟机服务器。Linux则需要重启后生效。</p>
-<p>kail有独特的方法：参考：https://jingyan.baidu.com/article/4b07be3c9de29248b380f3f9.html<br>
-将文件内的VMtools压缩包放在home文件内使用命令进行解压并配置：<br>
-1.解压命令： tar -zxvf 加压缩包名<br>
-2.进入指定文件夹：cd vmware-tools-distrib<br>
-3.查看当前目录：ls<br>
-4.执行某个文件(直接输入文件名即可)：./vmware-install.real.pl(备注：一直回车yes即可)<br>
-5.重启：reboot</p>
+              <p>1.安装插件sftp<br>
+2.ctrl+shift+p调出窗口输入sftp:config<br>
+3.配置基本信息，代码如下<br>
+{<br>
+&quot;name&quot;:&quot;站点名称&quot;,<br>
+&quot;host&quot;: &quot;IP地址&quot;,<br>
+&quot;username&quot;: &quot;登录名&quot;,<br>
+&quot;password&quot;: &quot;登录密码&quot;,<br>
+&quot;protocol&quot;: &quot;sftp&quot;,<br>
+&quot;port&quot;: 22,<br>
+&quot;remotePath&quot;: &quot;链接路径&quot;,<br>
+&quot;uploadOnSave&quot;: true,//上传下载服务<br>
+}</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://qiyulong.top/post/kail-xi-tong-geng-xin/">
+                <a href="https://qiyulong.top/post/xshell-cha-kan-bao-ta-deng-lu-xiang-guan/">
                   <h3 class="post-title">
-                    Kail系统更新
+                    xshell查看宝塔登录相关
                   </h3>
                 </a>
               </div>
