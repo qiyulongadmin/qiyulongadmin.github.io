@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-07-02T02:58:13.908Z</updated>
+    <updated>2020-07-03T03:57:05.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,51 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[爬虫]]></title>
+        <id>https://qiyulong.top/post/pa-chong/</id>
+        <link href="https://qiyulong.top/post/pa-chong/">
+        </link>
+        <updated>2020-07-03T00:18:54.000Z</updated>
+        <content type="html"><![CDATA[<p>phpQuery下载(官网)<br>
+https://code.google.com/archive/p/phpquery/downloads<br>
+github<br>
+https://github.com/TobiaszCudnik/phpquery<br>
+中文手册：<br>
+https://blog.csdn.net/summerxiachen/article/details/78681674</p>
+<p>querylist<br>
+文档：<br>
+https://querylist.cc/docs/guide/v4/example<br>
+使用方法：<br>
+https://segmentfault.com/a/1190000011428220?utm_source=sf-related</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[github图床]]></title>
+        <id>https://qiyulong.top/post/github-tu-chuang/</id>
+        <link href="https://qiyulong.top/post/github-tu-chuang/">
+        </link>
+        <updated>2020-07-03T00:17:34.000Z</updated>
+        <content type="html"><![CDATA[<p>https://github.com/Molunerfinn/PicGo</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[github提速]]></title>
+        <id>https://qiyulong.top/post/github-ti-su/</id>
+        <link href="https://qiyulong.top/post/github-ti-su/">
+        </link>
+        <updated>2020-07-02T07:30:37.000Z</updated>
+        <content type="html"><![CDATA[<p>克隆提速：(cnpmjs.org:换一个镜像)<br>
+原：git clone http://github.com/admin/123.git<br>
+现：git clone http://github.com.cnpmjs.org/admin/123.git</p>
+<p>jsdelivr可以提供免费的cdn加速：<br>
+加速静态博客的资源，或者搭建图床<br>
+这里以我托管博客的 GitHub 仓库为例，地址是 https://github.com/mzlogin/mzlogin.github.io，那它里面的资源可以直接以 https://cdn.jsdelivr.net/gh/mzlogin/mzlogin.github.io/ + 仓库里的文件路径 来访问。</p>
+<p>CDN 简介<br>
+内容分发网络（英语：Content Delivery Network或Content Distribution Network，缩写：CDN）是指一种透过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、影片、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。<br>
+简而言之就是让服务器距离大陆较远的 GitHub ，将托管在那里的静态资源缓存到一个近一点的服务器，从而加快访问。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[vs code链接ftp]]></title>
         <id>https://qiyulong.top/post/vs-code-lian-jie-ftp/</id>
@@ -122,41 +167,6 @@ document.getElementById(&quot;style-majors2&quot;).style.display=&quot;block&quo
         </link>
         <updated>2020-06-25T09:11:40.000Z</updated>
         <content type="html"><![CDATA[<p>use/share</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[注入工具sqlmap使用]]></title>
-        <id>https://qiyulong.top/post/zhu-ru-gong-ju-sqlmap-shi-yong/</id>
-        <link href="https://qiyulong.top/post/zhu-ru-gong-ju-sqlmap-shi-yong/">
-        </link>
-        <updated>2020-06-25T08:34:29.000Z</updated>
-        <content type="html"><![CDATA[<p>需求：Python环境，https://www.python.org/<br>
-SQLmap，http://sqlmap.org/</p>
-<p>安装Python（推荐：https://blog.csdn.net/nmjuzi/article/details/79075736），<br>
-将SQLmap文件放在Python目录中，使用cmd命令打开SQLmap文件，最终执行命令：<br>
-sqlmap.py</p>
-<p>使用：<br>
-检测注入点：sqlmap.py -u &quot;http://127.0.0.1/news?id=16&quot;<br>
-猜解表名：sqlmap.py -u &quot;sqlmap.py -u http://127.0.0.1/news?id=16&quot; --tables</p>
-<p>若在kali中，已集成好，命令：sqlmap</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[国际公认渗透工具]]></title>
-        <id>https://qiyulong.top/post/guo-ji-gong-ren-shen-tou-gong-ju/</id>
-        <link href="https://qiyulong.top/post/guo-ji-gong-ren-shen-tou-gong-ju/">
-        </link>
-        <updated>2020-06-25T08:20:29.000Z</updated>
-        <content type="html"><![CDATA[<p>sectools.org</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OWASP国外安全组织]]></title>
-        <id>https://qiyulong.top/post/owasp-guo-wai-an-quan-zu-zhi/</id>
-        <link href="https://qiyulong.top/post/owasp-guo-wai-an-quan-zu-zhi/">
-        </link>
-        <updated>2020-06-24T01:55:29.000Z</updated>
-        <content type="html"><![CDATA[<p>每年都会公布年度十大漏洞。</p>
 ]]></content>
     </entry>
 </feed>
