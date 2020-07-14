@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1593748622527">
+<link rel="shortcut icon" href="https://qiyulong.top/favicon.ico?v=1594718294612">
 <link rel="stylesheet" href="https://qiyulong.top/styles/main.css">
 
 
@@ -28,7 +28,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://qiyulong.top">
-        <img src="https://qiyulong.top/images/avatar.png?v=1593748622527" class="site-logo">
+        <img src="https://qiyulong.top/images/avatar.png?v=1594718294612" class="site-logo">
         <h1 class="site-title">吃小熊的霸王龙</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -83,6 +83,58 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://qiyulong.top/post/kail-xshell-ftp/">
+                  <h2 class="post-title">kail-xshell-ftp</h2>
+                </a>
+                <div class="post-date">
+                  2020-06-22
+                </div>
+                <div class="post-abstract">
+                  <p>1、是否打开ssh  服务?</p>
+<p>2、打开后是否需要本地数据库支持？  kali 升级后 msf数据库默认是 postgresql  要打开服务</p>
+<h1 id="service-ssh-start">service ssh start</h1>
+<h1 id="service-postgresql-start">service postgresql start</h1>
+<p>解决以上问题 就能顺利连接xshell。</p>
+<p>用Xshell root连接时显示ssh服务器拒绝了密码，应该是应该是sshd的设置不允许root用户用密码远程登录 <br>
+修改 /etc/ssh/sshd_config文件，注意，安装了openssh才会有这个文件，如果文件不存在请检查是否安装了openssh。</p>
+<p>vim /etc/ssh/sshd_config<br>
+1<br>
+找到代码</p>
+<h1 id="authentication">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin prohibit-password<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5</p>
+<p>改成</p>
+<h1 id="authentication-2">Authentication:</h1>
+<p>LoginGraceTime 120<br>
+PermitRootLogin yes<br>
+StrictModes yes<br>
+1<br>
+2<br>
+3<br>
+4<br>
+然后输入命令</p>
+<p>/etc/init.d/ssh restart<br>
+1<br>
+重启ssh服务即可。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://qiyulong.top/post/kail-xshell-ftp/">
+                  <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/kail-xshell-ftp.png')">
+                  </div>
+                </a>
+              
+            </article>
           
             <article class="post-item">
               <div class="left">
@@ -259,26 +311,6 @@
               
                 <a class="right" href="https://qiyulong.top/post/vm-jing-xiang-guan-fang-xia-zai-di-zhi/">
                   <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/vm-jing-xiang-guan-fang-xia-zai-di-zhi.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/">
-                  <h2 class="post-title">网络安全-web安全</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-02
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://qiyulong.top/post/wang-luo-an-quan-web-an-quan/">
-                  <div class="feature-container" style="background-image: url('https://qiyulong.top/post-images/wang-luo-an-quan-web-an-quan.jpg')">
                   </div>
                 </a>
               

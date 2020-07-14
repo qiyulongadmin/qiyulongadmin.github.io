@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qiyulong.top</id>
     <title>吃小熊的霸王龙</title>
-    <updated>2020-07-03T03:57:05.766Z</updated>
+    <updated>2020-07-14T09:18:19.011Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qiyulong.top"/>
     <link rel="self" href="https://qiyulong.top/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://qiyulong.top/images/avatar.png</logo>
     <icon>https://qiyulong.top/favicon.ico</icon>
     <rights>All rights reserved 2020, 吃小熊的霸王龙</rights>
+    <entry>
+        <title type="html"><![CDATA[数据库出现未授权报错]]></title>
+        <id>https://qiyulong.top/post/shu-ju-ku-chu-xian-wei-shou-quan-bao-cuo/</id>
+        <link href="https://qiyulong.top/post/shu-ju-ku-chu-xian-wei-shou-quan-bao-cuo/">
+        </link>
+        <updated>2020-07-14T09:17:26.000Z</updated>
+        <content type="html"><![CDATA[<p>本地连接数据库出现<br>
+Mysql:is not allowed to connect to this MySQL server<br>
+进入数据库，mysql-&gt;user-&gt;host字段中的localhost改成%</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[爬虫]]></title>
         <id>https://qiyulong.top/post/pa-chong/</id>
@@ -158,15 +169,6 @@ document.getElementById(&quot;style-majors2&quot;).style.display=&quot;block&quo
         <updated>2020-06-28T15:22:53.000Z</updated>
         <content type="html"><![CDATA[<p>https://www.kancloud.cn/</p>
 <p>大佬博客</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kali大部分工具存放位置]]></title>
-        <id>https://qiyulong.top/post/kali-da-bu-fen-gong-ju-cun-fang-wei-zhi/</id>
-        <link href="https://qiyulong.top/post/kali-da-bu-fen-gong-ju-cun-fang-wei-zhi/">
-        </link>
-        <updated>2020-06-25T09:11:40.000Z</updated>
-        <content type="html"><![CDATA[<p>use/share</p>
 ]]></content>
     </entry>
 </feed>
